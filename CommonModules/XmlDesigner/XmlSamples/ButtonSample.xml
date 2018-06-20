@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Button xmlns="http://s2gg.org/schemas/RuleSchemas" Text="Test" BackColor="Blue" Enabled="true" TextAlign="MiddleCenter" TextColor="Green">
+  <Events>
+    <OnClick>
+      <Actions>
+        <Action Name="Test">
+          
+        </Action>
+      </Actions>
+    </OnClick>
+  </Events>
+</Button>

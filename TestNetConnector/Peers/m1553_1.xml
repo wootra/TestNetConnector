@@ -1,0 +1,9 @@
+<Peer>
+  <Envs>
+    <Env Name="ConnPos">Server</Env>
+    <Env Name="GroupName">m1553cmds</Env>
+    <Env Name="Port">5501</Env>
+    <Env Name="IP">127.0.0.1</Env>
+    <Env Name="ResponseMode">EchoSelected</Env>
+  </Envs>
+</Peer>

@@ -1,0 +1,13 @@
+short in_command=0x0001;
+short in_tag = 0;
+int dataSize=25;
+byte command=0x09;
+byte channel=0x02;
+short cpu=0x1000;
+int serial=0x1000;
+short len=13;
+byte interface=0xD2;
+byte ch=0XC4;
+short datalen=9;
+string msg=abcdefghi;
+short checksum=0;

@@ -1,0 +1,25 @@
+<Packet>
+  <Infos Comment="" LastModified="2012-12-17 오후 4:58:20">
+    <Info />
+    <Info />
+  </Infos>
+  <Items>
+    <Item Name="c" Type="int" IsSwap="False" Visible="True" Size="1">
+      <Function Name="index" />
+    </Item>
+    <Item Name="a" Type="char" IsSwap="False" Visible="True" Size="5">
+      <InitValue>1</InitValue>
+      <InitValue>2</InitValue>
+      <InitValue>3</InitValue>
+      <InitValue>4</InitValue>
+      <InitValue>5</InitValue>
+    </Item>
+    <Item Name="b" Type="char" IsSwap="False" Visible="True" Size="5">
+      <InitValue>6</InitValue>
+      <InitValue>7</InitValue>
+      <InitValue>8</InitValue>
+      <InitValue>9</InitValue>
+      <InitValue>10</InitValue>
+    </Item>
+  </Items>
+</Packet>

@@ -1,0 +1,36 @@
+      <Tablix Name="[:TableName:]">
+        <TablixBody>
+          <TablixColumns>
+            [/TableColumns/]
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>[:HeaderHeight:]cm</Height>
+              <TablixCells>
+                [/HeaderCells/]
+              </TablixCells>
+            </TablixRow>
+            [/TableRows/]
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            [/ColumnMembers/]
+            
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            [/RowMembers/]
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>[:DataSetName:]</DataSetName>
+        <Top>[:TableTop:]cm</Top>
+        <Height>[:TableHeight:]cm</Height>
+        <Width>[:TableWidth:]cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>

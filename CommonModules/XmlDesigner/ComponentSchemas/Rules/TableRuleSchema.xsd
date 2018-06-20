@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://s2gg.org/schemas/RuleSchemas" xmlns="http://s2gg.org/schemas/RuleSchemas"
+           xmlns:colors="http://s2gg.org/schemas/TypeSchemas/Color">
+  
+  <xs:import namespace="http://s2gg.org/schemas/TypeSchemas/Color" schemaLocation="ColorRuleSchema.xsd"/>
+  <xs:include schemaLocation="GlobalTypesRuleSchema.xsd"/>
+  <xs:complexType name="TableType">
+    <xs:sequence minOccurs="0" maxOccurs="1">
+      <xs:element name="Events" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="OnCellClicked" type="CellClickEventType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="OnTextChanged" type="TextChangedEventType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="OnCheckBoxChanged" type="CheckBoxChangedEventType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="OnCheckBoxGroupSelected" type="EventType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="OnCellRightClicked" type="EventType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="OnCellDoubleClicked" type="EventType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="OnMenuClicked" type="EventType" minOccurs="0" maxOccurs="1"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TableInfo" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="BaseRowHeight" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Columns" type="ColumnsType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Rows" type="RowsType"  minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:attribute name="Ref" type="xs:anyURI" use="optional"/>
+    <xs:attribute name="Dock" type="DockStyles" use="optional"/>
+    <xs:attribute name="Margin" type="PaddingType" use="optional" />
+    <xs:attribute name="Padding" type="PaddingType" use="optional" />
+    <xs:attribute name="Anchor" type="AnchorStyles" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="CheckBoxChangedEventType">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:element name="Actions" minOccurs="1" maxOccurs="unbounded">
+        <xs:complexType mixed="true">
+          <xs:sequence>
+            <xs:element name="Condition" type="ConditionType" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="ComponentConditions" type="TableConditionsType" minOccurs="0" maxOccurs="1"/>
+            <xs:sequence minOccurs="1" maxOccurs="unbounded">
+              <xs:element name="Action" type="CheckBoxChangedActionType"/>
+            </xs:sequence>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CheckBoxChangedActionType">
+    <xs:choice minOccurs="0" maxOccurs="1">
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Arg">
+          <xs:simpleType>
+            <xs:union memberTypes="CellArgType CheckBoxArgType"/>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:choice>
+    <xs:attribute name="Name" type="xs:string" use="required"/>
+    <xs:attribute name="IsRealTimeArgs" type="xs:boolean" use="optional"/>
+  </xs:complexType>
+
+  <xs:simpleType name="CheckBoxArgType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="StartRowIndex"/>
+      <xs:enumeration value="EndRowIndex"/>
+      <xs:enumeration value="IsChecked"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:complexType name="TextChangedEventType">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:element name="Actions" minOccurs="1" maxOccurs="unbounded">
+        <xs:complexType mixed="true">
+          <xs:sequence>
+            <xs:element name="Condition" type="ConditionType" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="ComponentConditions" type="TableConditionsType" minOccurs="0" maxOccurs="1"/>
+            <xs:sequence minOccurs="1" maxOccurs="unbounded">
+              <xs:element name="Action" type="TextChangedActionType"/>
+            </xs:sequence>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TextChangedActionType">
+    <xs:choice minOccurs="0" maxOccurs="1">
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Arg">
+          <xs:simpleType>
+            <xs:union memberTypes="CellArgType TextCellArgType"/>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:choice>
+    <xs:attribute name="Name" type="xs:string" use="required"/>
+    <xs:attribute name="IsRealTimeArgs" type="xs:boolean" use="optional"/>
+  </xs:complexType>
+
+  <xs:simpleType name="TextCellArgType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Text"/>
+      <xs:enumeration value="BeforeText"/>
+      <xs:enumeration value="TextChangedArgs"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="CellClickEventType">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:element name="Actions" minOccurs="1" maxOccurs="unbounded">
+        <xs:complexType mixed="true">
+          <xs:sequence>
+            <xs:element name="Condition" type="ConditionType" maxOccurs="1" minOccurs="0"/>
+            <xs:element name="ComponentConditions" type="TableConditionsType" minOccurs="0" maxOccurs="1"/>
+            <xs:sequence minOccurs="1" maxOccurs="unbounded">
+              <xs:element name="Action" type="CellClickActionType"/>
+            </xs:sequence>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TableConditionsType">
+    <xs:complexContent>
+      <xs:extension base="ComponentConditionType">
+        <xs:sequence minOccurs="1" maxOccurs="1">
+          <xs:element name="ColumnName" type="xs:string" maxOccurs="1" minOccurs="0"/>
+          <xs:element name="RowName" type="xs:string" maxOccurs="1" minOccurs="0"/>
+          <xs:element name="Enabled" type="xs:boolean" maxOccurs="1" minOccurs="0"/>
+        </xs:sequence>    
+      </xs:extension>
+    </xs:complexContent>
+    
+  </xs:complexType>
+
+  <xs:complexType name="ComponentConditionType">
+    <xs:attribute name="Type" type="xs:string"/>
+  </xs:complexType>
+  
+  <xs:complexType name="CellClickActionType">
+    <xs:choice minOccurs="0" maxOccurs="1">
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Arg" type="CellArgType"/>
+      </xs:sequence>
+    </xs:choice>
+    <xs:attribute name="Name" type="xs:string" use="required"/>
+    <xs:attribute name="IsRealTimeArgs" type="xs:boolean" use="optional"/>
+  </xs:complexType>
+
+  <xs:simpleType name="CellArgType">
+    <xs:union memberTypes="RealTimeArgsType RealTimeRequestType"/>
+  </xs:simpleType>
+  
+  <xs:simpleType name="RealTimeRequestType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[^@]{1}[^`]*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="RealTimeArgsType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="@ColumnIndex"/>
+      <xs:enumeration value="@RowIndex"/>
+      <xs:enumeration value="@CurrentCell"/>
+      <xs:enumeration value="@CellValue"/>
+      <xs:enumeration value="@Text"/>
+      <xs:enumeration value="@BeforeText"/>
+      <xs:enumeration value="@TextChangedArgs"/>
+      <xs:enumeration value="@StartRowIndex"/>
+      <xs:enumeration value="@EndRowIndex"/>
+      <xs:enumeration value="@IsChecked"/>
+      <xs:enumeration value="@Packet.Command"/>
+      <xs:enumeration value="@Packet.Response"/>
+      <xs:enumeration value="@Packet.Info"/>
+      <xs:enumeration value="@Packet"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="RowsType">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="Row" type="RowType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RowType">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:element name="RowInfo" type="RowInfoType" minOccurs="0"/>
+      <xs:choice minOccurs="1" maxOccurs="1">
+        <xs:element name="Cells" type="CellsType" minOccurs="1"/>
+        <xs:element name="ChosenCells" type="ChosenCellsType" minOccurs="1"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:ID"/>
+  </xs:complexType>
+
+  <xs:complexType name="RowInfoType">
+    <xs:sequence minOccurs="0" maxOccurs="1">
+      <xs:element name="Height" type="xs:int"/>
+      <xs:element name="RelativeObjects">
+        <xs:complexType>
+          <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="Object">
+              <xs:complexType>
+                <xs:attribute name="Name" type="xs:string"/>
+                <xs:attribute name="Value" type="xs:string"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CellsType">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="Cell" type="CellType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ChosenCellsType">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="Cell" type="ChosenCellType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CellType">
+    <xs:sequence minOccurs="0" maxOccurs="1">
+      <xs:element name="ItemInfo" type="ItemInfoType"/>
+    </xs:sequence>
+    <xs:attribute name="Value" type="xs:string" use="optional"/>
+    <xs:attribute name="Tooltip" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="ChosenCellType">
+    <xs:sequence minOccurs="0" maxOccurs="1">
+      <xs:element name="ItemInfo" type="ItemInfoType"/>
+    </xs:sequence>
+    <xs:attribute name="ColumnName" type="xs:string" use="required"/>
+    <xs:attribute name="Value" type="xs:string" use="optional"/>
+    <xs:attribute name="Tooltip" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="ItemInfoType" mixed="true">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:element name="ImageList" type="ImageListType" minOccurs="0"/>
+      <xs:element name="SelectedIndex" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="Value" type="xs:int"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Text" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="Value" type="xs:string"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SingleSelItems" minOccurs="0" type="SingleSelItemsType"/>
+      <xs:element name="MultiSelItems" minOccurs="0" type="MultiSelItemsType"/>
+
+      <xs:element name="ImageLayout" minOccurs="0">
+        <xs:complexType>
+          <xs:attribute name="Value" type="ImageLayouts"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="KeyValueColorCollection" type="KeyValueColorsType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="ItemType" type="ItemTypes" use="required"/>
+    
+  </xs:complexType>
+  
+  <xs:complexType name="ColumnsType">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="Column">
+        <xs:complexType>
+          <xs:complexContent mixed="true">
+            <xs:extension base="PropertyBorderType">
+              <xs:sequence>
+                <xs:element minOccurs="0" name="Actions">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="OnClick" type="xs:string" />
+                      <xs:element name="OnDoubleClick" type="xs:string" />
+                      <xs:element name="OnRightClick" type="xs:string" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+              <xs:attribute name="Width" type="xs:int" use="required" />
+              <xs:attribute name="Name" type="xs:ID" use="required" />
+              <xs:attribute name="ItemType" type="ItemTypes" use="required" />    
+            </xs:extension>
+          </xs:complexContent>
+          
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PropertyBorderType" mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="1">
+      <xs:element minOccurs="0" name="VariousProperties">
+        <xs:complexType>
+          <xs:attribute name="HeaderText" type="xs:string" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="FileOpenBoxProperties">
+        <xs:complexType>
+          <xs:attribute name="HeaderText" type="xs:string" use="required" />
+          <xs:attribute name="Editable" type="xs:boolean" use="required" />
+          <xs:attribute name="TextAlignMode" type="TextAlignModeTypes" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="KeyValueProperties">
+        <xs:complexType>
+          <xs:attribute name="HeaderText" type="xs:string" use="required" />
+          <xs:attribute name="TextAlignMode" type="TextAlignModeTypes" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="TextBoxProperties">
+        <xs:complexType>
+          <xs:attribute name="HeaderText" type="xs:string" use="required" />
+          <xs:attribute name="Editable" type="xs:boolean" use="required" />
+          <xs:attribute name="IsAutoSort" type="xs:boolean" use="required" />
+          <xs:attribute name="TextAlignMode" type="TextAlignModeTypes" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="CloseButtonProperties">
+        <xs:complexType>
+          <xs:attribute name="HeaderText" type="xs:string" use="required" />
+          <xs:attribute name="BaseText" type="xs:string" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="ButtonProperties">
+        <xs:complexType>
+          <xs:attribute name="HeaderText" type="xs:string" use="required" />
+          <xs:attribute name="BaseText" type="xs:string" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="ImageButtonProperties">
+        <xs:complexType>
+          <xs:sequence minOccurs="0" maxOccurs="1">
+            <xs:element name="ImageList" type="ImageListType"/>
+          </xs:sequence>
+          <xs:attribute name="HeaderText" type="xs:string" use="required" />
+          <xs:attribute name="TitleShowImage" type="xs:byte" use="required" />
+          <xs:attribute name="ShowTitleText" type="xs:boolean" use="optional" />
+          <xs:attribute name="UseColumnTextForButtonValue" type="xs:boolean" use="optional" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="ImageProperties">
+        <xs:complexType>
+          <xs:sequence minOccurs="0" maxOccurs="1">
+            <xs:element name="ImageList" type="ImageListType"/>
+          </xs:sequence>
+          <xs:attribute name="HeaderText" type="xs:string" use="required" />
+          <xs:attribute name="TitleShowImage" type="xs:byte" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="RadioButtonProperties">
+        <xs:complexType>
+          <xs:sequence minOccurs="0" maxOccurs="1">
+            <xs:element name="SingleSelItems" type="SingleSelItemsType"/>
+          </xs:sequence>
+          <xs:attribute name="HeaderText" type="xs:string" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="ComboBoxProperties">
+        <xs:complexType>
+          <xs:sequence minOccurs="0" maxOccurs="1">
+            <xs:element name="SingleSelItems" type="SingleSelItemsType"/>
+          </xs:sequence>
+          <xs:attribute name="HeaderText" type="xs:string" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="ImageCheckBoxProperties">
+        <xs:complexType mixed="true">
+          <xs:sequence minOccurs="0" maxOccurs="1">
+            <xs:element name="CheckImageList" type="CheckImageListType"/>
+          </xs:sequence>
+          <xs:attribute name="HeaderText" type="xs:string" use="required" />
+          <xs:attribute name="InitValue" type="xs:unsignedByte" use="required" />
+          <xs:attribute name="CheckColor" type="CheckColors" use="optional" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="CheckBoxProperties">
+        <xs:complexType>
+          <xs:attribute name="TriState" type="xs:string" use="optional" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="CheckBoxGroupProperties">
+        <xs:complexType>
+          <xs:sequence minOccurs="0">
+            <xs:element name="MultiSelItems" type="MultiSelItemsType"/>
+          </xs:sequence>
+          <xs:attribute name="HeaderText" type="xs:string" use="optional" />
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="CheckImageListType">
+    <xs:sequence>
+      <xs:element name="NormalImage">
+        <xs:complexType>
+          <xs:attribute name="URL" type="xs:anyURI" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CheckImage">
+        <xs:complexType>
+          <xs:attribute name="URL" type="xs:anyURI" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InterImage">
+        <xs:complexType>
+          <xs:attribute name="URL" type="xs:anyURI" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DisabledImage">
+        <xs:complexType>
+          <xs:attribute name="URL" type="xs:anyURI" use="required" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="InfoCell" mixed="true">
+    <xs:sequence minOccurs="0">
+      <xs:element name="ItemInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="KeyValueColorCollection" type="KeyValueColorsType"/>
+            <xs:element minOccurs="0" name="ImageList" type="ImageListType"/>
+            <xs:element minOccurs="0" name="SingleSelItems" type="SingleSelItemsType"/>
+            <xs:element minOccurs="0" name="MultiSelItems" type="MultiSelItemsType"/>
+            <xs:element minOccurs="0" name="SelectedIndex">
+              <xs:complexType>
+                <xs:attribute name="Value" type="xs:unsignedByte" use="required" />
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="Text">
+              <xs:complexType>
+                <xs:attribute name="Value" type="xs:string" use="required" />
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="ImageLayout">
+              <xs:complexType>
+                <xs:attribute name="Value" type="ImageLayouts" use="required" />
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="Checked">
+              <xs:complexType>
+                <xs:attribute name="Value" type="xs:boolean" use="optional"/>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="CheckInt">
+              <xs:complexType>
+                <xs:attribute name="Value" type="xs:int" use="required" />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="ItemType" type="xs:string" use="optional" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Tooltip" type="xs:string" use="optional" />
+  </xs:complexType>
+  
+  <xs:complexType name="KeyValueColorsType">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="Item">
+        <xs:complexType>
+          <xs:attribute name="Key" type="xs:string" use="required" />
+          <xs:attribute name="Value" type="xs:string" use="optional" />
+          <xs:attribute name="Color" type="colors:ColorType" use="optional" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="KeyValuesType">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="Object">
+        <xs:complexType>
+          <xs:attribute name="Name" type="xs:string" use="required" />
+          <xs:attribute name="Value" type="xs:string" use="required" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="SingleSelItemsType">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="SingleSelItem" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="SelectedIndex" type="xs:unsignedByte" use="required" />
+  </xs:complexType>
+  
+  <xs:complexType name="MultiSelItemsType">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="MultiSelItem">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="Checked" type="xs:boolean" use="required" />
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:simpleType name="TextAlignModeTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Right"/>
+      <xs:enumeration value="Left"/>
+      <xs:enumeration value="NumberOnlyRight"/>
+      <xs:enumeration value="Center"/>
+      <xs:enumeration value="NumberRightTextCenter"/>
+      <xs:enumeration value="None"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="CheckColors">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Red"/>
+      <xs:enumeration value="Blue"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  
+  <xs:simpleType name="ItemTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TextBox"/>
+      <xs:enumeration value="CheckBox"/> 
+      <xs:enumeration value="ComboBox"/>
+      <xs:enumeration value="CheckBoxGroup"/> 
+      <xs:enumeration value="Button"/> 
+      <xs:enumeration value="Image"/> 
+      <xs:enumeration value="ImageButton"/> 
+      <xs:enumeration value="ImageCheckBox"/>
+      <xs:enumeration value="CloseButton"/>
+      <xs:enumeration value="RadioButton"/> 
+      <xs:enumeration value="KeyValue"/> 
+      <xs:enumeration value="Various"/> 
+      <xs:enumeration value="FileOpenBox"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

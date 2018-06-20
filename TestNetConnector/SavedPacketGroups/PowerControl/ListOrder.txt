@@ -1,0 +1,2 @@
+Power_control_Fail
+Power_control_OK

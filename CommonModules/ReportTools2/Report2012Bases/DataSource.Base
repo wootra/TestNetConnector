@@ -1,0 +1,9 @@
+    <DataSource Name="[:DataSourceName:]">
+      <ConnectionProperties>
+        <DataProvider>
+        </DataProvider>
+        <ConnectString>
+        </ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>58f5a201-08fe-49b5-92a4-9fe4cbb7534c</rd:DataSourceID>
+    </DataSource>

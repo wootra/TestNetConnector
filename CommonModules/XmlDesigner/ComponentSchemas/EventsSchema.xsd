@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://s2gg.org/schemas/RuleSchemas" xmlns ="http://s2gg.org/schemas/RuleSchemas">
+
+  <xs:include schemaLocation="Rules/GlobalTypesRuleSchema.xsd"/>
+
+  <xs:element name="Events">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="OnClick" type="EventType" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="OnDoubleClick" type="EventType" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="OnTextChanged" type="EventType" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="OnChecked" type="EventType" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="OnLostFocus" type="EventType" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="OnMouseEnter" type="EventType" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="OnMouseLeave" type="EventType" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+    
+  </xs:element>
+</xs:schema>

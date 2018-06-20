@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://s2gg.org/schemas/RuleSchemas" xmlns="http://s2gg.org/schemas/RuleSchemas"
+           xmlns:colors="http://s2gg.org/schemas/TypeSchemas/Color">
+  <xs:import namespace="http://s2gg.org/schemas/TypeSchemas/Color" schemaLocation="ColorRuleSchema.xsd"/>
+  <xs:include schemaLocation="TableRuleSchema.xsd"/>
+  <xs:include schemaLocation="SimpleComsRuleSchema.xsd"/>
+  <xs:include schemaLocation="GlobalTypesRuleSchema.xsd"/>
+  
+  <xs:complexType name="LayoutType" mixed="true">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:choice>
+        <xs:element  name="Flow">
+          <xs:complexType>
+            <xs:sequence minOccurs="0">
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="Component" type="FlowComponentType"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Panel">
+          <xs:complexType>
+            <xs:sequence minOccurs="0">
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="Component" type="PanelComponentType"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Dock" type="DockStyles" use="required" />
+    <xs:attribute name="Height" type="xs:int" use="optional" />
+    <xs:attribute name="Width" type="xs:int" use="optional" />
+    <xs:attribute name="X" type="xs:int" use="optional" />
+    <xs:attribute name="Y" type="xs:int" use="optional" />
+    <xs:attribute name="Background-Image" type="xs:anyURI" use="optional" />
+    <xs:attribute name="Background-ImageLayout" type="ImageLayouts" use="optional" />
+    <xs:attribute name="Background-Color" type="colors:ColorType" use="optional" />
+    <xs:attribute name="NameSpace" type="xs:string" use="optional"/>
+    <xs:attribute name="Ref" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="TabType" mixed="true">
+    <xs:sequence minOccurs="0" maxOccurs="1">
+      <xs:choice>
+        <xs:element  name="Flow">
+          <xs:complexType>
+            <xs:sequence minOccurs="0">
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="Component" type="FlowComponentType"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Panel">
+          <xs:complexType mixed="true">
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="Component" type="PanelComponentType"/>        
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" use="required"/>
+    <xs:attribute name="Text" type="xs:string" use="required"/>
+    <xs:attribute name="NameSpace" type="xs:string" use="optional"/>
+    <xs:attribute name="Ref" type="xs:anyURI" use="optional"/>
+  </xs:complexType>
+
+  <xs:complexType name="TabControlType" mixed="true">
+    <xs:sequence minOccurs="1" maxOccurs="unbounded">
+      <xs:element name="TabControlInfo" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence minOccurs="0">
+            <xs:element name="TabImages" type="ImageListType" maxOccurs="1"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Tabs">
+        <xs:complexType>
+          <xs:sequence minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="Tab" type="TabType"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Ref" type="xs:string" use="optional"/>
+
+  </xs:complexType>
+
+  <xs:complexType name="FlowComponentType" mixed="true">
+    <xs:complexContent>
+      <xs:extension base="ComponentType">
+        <xs:attribute name="Width" type="xs:int" use="required" />
+        <xs:attribute name="Height" type="xs:int" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="PanelComponentType" mixed="true">
+    <xs:complexContent>
+      <xs:extension base="ComponentType">
+        <xs:attribute name="Width" type="xs:int" use="required" />
+        <xs:attribute name="Height" type="xs:int" use="required" />
+        <xs:attribute name="X" type="xs:int" use="required" />
+        <xs:attribute name="Y" type="xs:int" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="ComponentType" mixed="true">
+    <xs:sequence minOccurs="0" maxOccurs="1">
+      <xs:choice>
+        <xs:element name="Layout" type="LayoutType"/>
+        <xs:element name="Label" type="LabelType"/>
+        <xs:element name="TextBox" type="TextBoxType"/>
+        <xs:element name="Button" type="ButtonType"/>
+        <xs:element name="ImageButton" type="ImageButtonType"/>
+        <xs:element name="ScenarioTable" type="TableType"/>
+        <xs:element name="LogTable" type="TableType"/>
+        <xs:element name="PropertyTable" type="TableType"/>
+        <xs:element name="TabControl" type="TabControlType"/>
+        <xs:element name="Led" type="ImageLedType"/>
+        <xs:element name="TextArea" type="TextAreaType"/>
+        <xs:element name="CustomControl" type="CustomComponentType"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Ref" type="xs:anyURI" use="optional" />
+    <xs:attribute name="Name" type="xs:string" use="required"/>
+    <xs:attribute name="Margin" type="PaddingType" use="optional"/>
+  </xs:complexType>
+
+</xs:schema>

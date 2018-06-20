@@ -1,0 +1,10 @@
+<Peer>
+  <Envs>
+    <Env Name="GroupName">UdpPackets</Env>
+    <Env Name="IP">127.0.0.1</Env>
+    <Env Name="Port">6001</Env>
+    <Env Name="ConnMode">Udp</Env>
+    <Env Name="ConnPos">Client</Env>
+    <Env Name="ResponseMode">EchoSelected</Env>
+  </Envs>
+</Peer>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<TabControl xmlns="http://s2gg.org/schemas/RuleSchemas">
+  <Tabs>
+    
+    <Tab Name="tab1" Text="Power Control">
+      <Flow>
+        <Component Width="130" Height="50" Name="TextBox1" Ref="TextBoxSample.xml"/>
+        <Component Width="100" Height="50" Name="TextBox2">
+          <TextBox Text="Test" TextAlign="Right"/>
+        </Component>
+      </Flow>
+    </Tab>
+    <Tab Name="tab2" Text="Test">
+      <Panel>
+        <Component Width="200" Height="300" X="0" Y="0" Name="Table1" Ref="ScenarioTableSample.xml"/>
+        <Component Width="400" Height="300" X="250" Y="0" Name="Layout1">
+          <Layout Dock="None">
+            <Flow>
+              <Component Width="200" Height="30" Name="Label1" Ref="LabelSample.xml"/>
+              <Component Width="200" Height="30" Name="Button1" Ref="ButtonSample.xml"/>
+              <Component Width="200" Height="30" Name="Button1" Ref="ButtonSample.xml"/>
+              <Component Width="200" Height="30" Name="Button1" Ref="ButtonSample.xml"/>
+            </Flow>
+          </Layout>
+        </Component>
+        <Component Width="200" Height="30" X="650" Y="50" Name="Label3" Ref="LabelSample.xml"/>
+      </Panel>
+    </Tab>
+  </Tabs>
+</TabControl>

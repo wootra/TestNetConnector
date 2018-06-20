@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://s2gg.org/schemas/RuleSchemas"
+  xmlns="http://s2gg.org/schemas/RuleSchemas"
+  xmlns:colors="http://s2gg.org/schemas/TypeSchemas/Color">
+  <xs:import namespace="http://s2gg.org/schemas/TypeSchemas/Color"
+    schemaLocation="ColorRuleSchema.xsd"/>
+
+  <xs:complexType name="ImageListType">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="Image">
+        <xs:complexType>
+          <xs:attribute name="URL" type="xs:anyURI" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="TextVerticalAligns">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Top"/>
+      <xs:enumeration value="Bottom"/>
+      <xs:enumeration value="Center"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TextHorizontalAligns">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Right"/>
+      <xs:enumeration value="Left"/>
+      <xs:enumeration value="Center"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ContentAlignment">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TopLeft"/>
+      <xs:enumeration value="TopCenter"/>
+      <xs:enumeration value="TopRight"/>
+      <xs:enumeration value="MiddleLeft"/>
+      <xs:enumeration value="MiddleCenter"/>
+      <xs:enumeration value="MiddleRight"/>
+      <xs:enumeration value="BottomLeft"/>
+      <xs:enumeration value="BottomCenter"/>
+      <xs:enumeration value="BottomRight"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="EventType">
+    <xs:sequence minOccurs="1" maxOccurs="unbounded">
+      <xs:element name="Actions" minOccurs="1" maxOccurs="unbounded">
+        <xs:complexType mixed="true">
+          <xs:sequence>
+          <xs:element name="Condition" type="ConditionType" maxOccurs="1" minOccurs="0"/>
+          <xs:sequence minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="Action" type="ActionType"/>
+          </xs:sequence>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="CustomEventType">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:element name="Actions" minOccurs="1" maxOccurs="1">
+        <xs:complexType mixed="true">
+          <xs:sequence>
+            <xs:element name="Condition" type="ConditionType" maxOccurs="1" minOccurs="0"/>
+            <xs:sequence minOccurs="1" maxOccurs="unbounded">
+              <xs:element name="Action" type="ActionType"/>
+            </xs:sequence>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string"/>
+  </xs:complexType>
+  
+
+  <xs:complexType name="ConditionType">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="True"/>
+        <xs:element name="False"/>
+        <xs:element name="And" type="ConditionType"/>
+        <xs:element name="Or" type="ConditionType"/>
+        <xs:element name="Equal" type="EqualType"/>
+        <xs:element name="More" type="CompareType"/>
+        <xs:element name="MoreOrEqual" type="CompareType"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CompareType">
+    <xs:sequence minOccurs="2" maxOccurs="unbounded">
+      <xs:element name="Value">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="Type" type="BasicTypes" use="required"/>
+              <xs:attribute name="IsVariable" type="xs:boolean" use="optional"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="EqualType">
+    <xs:sequence minOccurs="2" maxOccurs="unbounded">
+      <xs:element name="Value">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="Type" type="BasicTypes" use="required"/>
+              <xs:attribute name="IsVariable" type="xs:boolean" use="optional"/>
+              <xs:attribute name="IsComponent" type="xs:boolean" use="optional"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ActionType">
+    <xs:choice minOccurs="0" maxOccurs="1">
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Arg" type="xs:string"/>
+      </xs:sequence>
+      
+      <xs:element name="Args">
+        <xs:simpleType>
+          <xs:union memberTypes="DecimalListType DoubleListType xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:choice>
+    <xs:attribute name="Name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:simpleType name="DecimalListType">
+    <xs:list itemType="xs:decimal"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="DoubleListType">
+    <xs:list itemType="xs:double"/>
+  </xs:simpleType>
+
+
+  <xs:simpleType name="BasicTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="sbyte"/>
+      <xs:enumeration value="short"/>
+      <xs:enumeration value="int"/>
+      <xs:enumeration value="long"/>
+      <xs:enumeration value="byte"/>
+      <xs:enumeration value="ushort"/>
+      <xs:enumeration value="uint"/>
+      <xs:enumeration value="ulong"/>
+      <xs:enumeration value="float"/>
+      <xs:enumeration value="double"/>
+      <xs:enumeration value="string_ASCII"/>
+      <xs:enumeration value="string_UTF_8"/>
+      <xs:enumeration value="string_unicode"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PaddingType">
+    <xs:list itemType="xs:int"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="ImageLayouts">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None"/>
+      <xs:enumeration value="Tile"/>
+      <xs:enumeration value="Center"/>
+      <xs:enumeration value="Stretch"/>
+      <xs:enumeration value="Zoom"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:simpleType name="DockStyles">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Top"/>
+      <xs:enumeration value="Bottom"/>
+      <xs:enumeration value="Fill"/>
+      <xs:enumeration value="Right"/>
+      <xs:enumeration value="Left"/>
+      <xs:enumeration value="None"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="AnchorStyles">
+    <xs:list itemType="AnchorStyleTypes"/>
+  </xs:simpleType>
+  
+  <xs:simpleType name="AnchorStyleTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Top"/>
+      <xs:enumeration value="Bottom"/>
+      <xs:enumeration value="Right"/>
+      <xs:enumeration value="Left"/>
+      <xs:enumeration value="None"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

@@ -1,0 +1,170 @@
+<Packet>
+  <Infos Comment="" LastModified="0001-01-01 오전 12:00:00">
+    <Info />
+    <Info />
+  </Infos>
+  <Items>
+    <Item Name="in_command" Type="short" IsSwap="False" Size="1">
+      <InitValue>0x0001</InitValue>
+    </Item>
+    <Item Name="in_tag" Type="short" IsSwap="False" Size="1">
+      <InitValue>1</InitValue>
+    </Item>
+    <Item Name="times" Type="int" IsSwap="False" Size="4">
+      <InitValue>                                    1</InitValue>
+      <InitValue>2</InitValue>
+      <InitValue>3</InitValue>
+      <InitValue>4</InitValue>
+    </Item>
+    <Item Name="size" Type="int" IsSwap="False" Size="1">
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="command" Type="byte" IsSwap="False" Size="1">
+      <InitValue>0x0c</InitValue>
+    </Item>
+    <Item Name="ch" Type="byte" IsSwap="False" Size="1">
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="cpu_board_id" Type="short" IsSwap="False" Size="1">
+      <InitValue>1</InitValue>
+    </Item>
+    <Item Name="sn" Type="int" IsSwap="False" Size="1">
+      <InitValue>1</InitValue>
+    </Item>
+    <Item Name="size" Type="short" IsSwap="False" Size="1">
+      <InitValue>126</InitValue>
+    </Item>
+    <Item Name="header" Type="ushort" IsSwap="False" Size="1">
+      <InitValue>0xa6a6</InitValue>
+    </Item>
+    <Item Name="data" Type="byte" IsSwap="False" Size="124">
+      <InitValue>0xff</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0x1f</InitValue>
+      <InitValue>0x03</InitValue>
+      <InitValue>0xec</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="chsum" Type="short" IsSwap="False" Size="1">
+      <InitValue>-132</InitValue>
+    </Item>
+  </Items>
+</Packet>

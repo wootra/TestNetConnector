@@ -1,0 +1,8 @@
+<Peer>
+  <Envs>
+    <Env Name="GroupName">Group1</Env>
+    <Env Name="IP">192.168.1.70</Env>
+    <Env Name="Port">0xceed</Env>
+    <Env Name="ConnPos">Client</Env>
+  </Envs>
+</Peer>

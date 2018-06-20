@@ -1,0 +1,104 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="Buttons.BlueRound"
+	x:Name="BlueRound1"
+	d:DesignWidth="218" d:DesignHeight="119" ContentTemplate="{DynamicResource LabelInBtn}" Background="{x:Null}" Foreground="{Binding}" FontSize="{Binding}">
+	<UserControl.Resources>
+        <DataTemplate x:Key="LabelInBtn">
+            <DataTemplate.Resources>
+                <Storyboard x:Key="MouseOverStory">
+                    <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)" Storyboard.TargetName="ButtonBackground">
+                        <SplineColorKeyFrame KeyTime="0" Value="#FF09142D"/>
+                    </ColorAnimationUsingKeyFrames>
+                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[4].(GradientStop.Offset)" Storyboard.TargetName="ButtonBackground">
+                        <SplineDoubleKeyFrame KeyTime="0" Value="0.793"/>
+                    </DoubleAnimationUsingKeyFrames>
+                    <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[4].(GradientStop.Color)" Storyboard.TargetName="ButtonBackground">
+                        <SplineColorKeyFrame KeyTime="0" Value="#FF17223D"/>
+                        <SplineColorKeyFrame KeyTime="0:0:0.4" Value="#FF455989"/>
+                        <SplineColorKeyFrame KeyTime="0:0:0.6" Value="#FF626F91"/>
+                    </ColorAnimationUsingKeyFrames>
+                </Storyboard>
+                <Storyboard x:Key="PressStory">
+                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[4].(GradientStop.Offset)" Storyboard.TargetName="ButtonBackground">
+                        <SplineDoubleKeyFrame KeyTime="0" Value="0.81"/>
+                        <SplineDoubleKeyFrame KeyTime="0:0:0.28" Value="0.845"/>
+                        <SplineDoubleKeyFrame KeyTime="0:0:0.58" Value="0.763"/>
+                    </DoubleAnimationUsingKeyFrames>
+                    <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[4].(GradientStop.Color)" Storyboard.TargetName="ButtonBackground">
+                        <SplineColorKeyFrame KeyTime="0:0:0.28" Value="#FF0E2252"/>
+                        <SplineColorKeyFrame KeyTime="0:0:0.58" Value="#FF061439"/>
+                    </ColorAnimationUsingKeyFrames>
+                    <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="ButtonBackground">
+                        <SplineColorKeyFrame KeyTime="0:0:0.28" Value="#FF002170"/>
+                        <SplineColorKeyFrame KeyTime="0:0:0.58" Value="#FF021C5A"/>
+                    </ColorAnimationUsingKeyFrames>
+                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Offset)" Storyboard.TargetName="ButtonBackground">
+                        <SplineDoubleKeyFrame KeyTime="0:0:0.28" Value="0.082"/>
+                        <SplineDoubleKeyFrame KeyTime="0:0:0.58" Value="0.056"/>
+                    </DoubleAnimationUsingKeyFrames>
+                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[5].(GradientStop.Offset)" Storyboard.TargetName="ButtonBackground">
+                        <SplineDoubleKeyFrame KeyTime="0:0:0.28" Value="0.155"/>
+                        <SplineDoubleKeyFrame KeyTime="0:0:0.58" Value="0.25"/>
+                    </DoubleAnimationUsingKeyFrames>
+                    <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[5].(GradientStop.Color)" Storyboard.TargetName="ButtonBackground">
+                        <SplineColorKeyFrame KeyTime="0:0:0.28" Value="#FE00081C"/>
+                        <SplineColorKeyFrame KeyTime="0:0:0.58" Value="#FE010102"/>
+                    </ColorAnimationUsingKeyFrames>
+                </Storyboard>
+            </DataTemplate.Resources>
+			<Grid Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" d:DesignWidth="266.833" d:DesignHeight="114.167" Background="{x:Null}">
+				<Label Name="label" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Panel.ZIndex="1" Content="{Binding}" FontSize="{Binding}" RenderTransformOrigin="0.5,0.5" Foreground="White">
+					<Label.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform/>
+							<SkewTransform/>
+							<RotateTransform/>
+							<TranslateTransform/>
+						</TransformGroup>
+					</Label.RenderTransform>
+				</Label>
+                <Rectangle x:Name="ButtonBackground" Margin="0" RadiusY="20" RadiusX="20" Stroke="#FF0C2F4B" StrokeThickness="2">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush
+						EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop
+						Color="#FF000718" Offset="0.082"/>
+                            <GradientStop
+						Color="#FF002170" Offset="0.927"/>
+                            <GradientStop
+						Color="#FF2A4070"/>
+                            <GradientStop
+						Color="#FF0F1A33" Offset="1"/>
+                            <GradientStop Color="#FF001D63" Offset="0.806"/>
+                            <GradientStop Color="#FE00081C" Offset="0.155"/>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+			</Grid>
+			<DataTemplate.Triggers>
+                <EventTrigger RoutedEvent="Mouse.MouseEnter">
+                    <BeginStoryboard Storyboard="{StaticResource MouseOverStory}"/>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="Mouse.MouseLeave">
+                    <BeginStoryboard Storyboard="{StaticResource PressStory}"/>
+                </EventTrigger>
+
+                <Trigger Property="IsMouseOver" SourceName="ButtonBackground" Value="True">
+                    
+                    <Trigger.ExitActions>
+                        <BeginStoryboard x:Name="PressStory_BeginStoryboard2" Storyboard="{StaticResource PressStory}"/>
+                    </Trigger.ExitActions>
+                    <Trigger.EnterActions>
+                        <BeginStoryboard x:Name="MouseOverStory_BeginStoryboard" Storyboard="{StaticResource MouseOverStory}"/>
+                    </Trigger.EnterActions>
+                </Trigger>
+            </DataTemplate.Triggers>
+		</DataTemplate>
+        
+	</UserControl.Resources>
+</UserControl>

@@ -1,0 +1,23 @@
+<Packet>
+  <Infos Comment="" LastModified="2012-10-24 오후 12:01:57">
+    <Info />
+    <Info />
+  </Infos>
+  <Items>
+    <Item Name="in_command" Type="short" IsSwap="False" Size="1">
+      <InitValue>0x0602</InitValue>
+    </Item>
+    <Item Name="in_tag" Type="short" IsSwap="False" Size="1">
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="timeTag" Type="int" IsSwap="False" Size="4">
+      <InitValue>      0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="size" Type="int" IsSwap="False" Size="1">
+      <InitValue>0</InitValue>
+    </Item>
+  </Items>
+</Packet>

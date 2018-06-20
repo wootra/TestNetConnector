@@ -1,0 +1,9 @@
+<Peer>
+  <Envs>
+    <Env Name="GroupName">Group1</Env>
+    <Env Name="IP">127.0.0.1</Env>
+    <Env Name="Port">5001</Env>
+    <Env Name="ConnPos">Server</Env>
+    <Env Name="ResponseMode">0</Env>
+  </Envs>
+</Peer>

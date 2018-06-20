@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4703A92-6722-446B-9A81-17F55A149A71}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WootraComs</RootNamespace>
+    <AssemblyName>WootraComs</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>z:\BuildPrograms\WootraComs\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>z:\BuilPrograms\CommonModules_Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataHandling_1.0.2, Version=1.0.2.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\DataHandling_1.0.2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="wTreeElements\Editors\ImageSelectorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wTreeElements\Editors\ImageSelectorDialog.Designer.cs">
+      <DependentUpon>ImageSelectorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="wTreeElements\MouseWheelHandler.cs" />
+    <Compile Include="wTreeElements\TreeHandlers\DrawHandler.cs" />
+    <Compile Include="wTreeElements\Editors\ComboBoxEditor.cs" />
+    <Compile Include="wTreeElements\Editors\ImageSelectEditor.cs" />
+    <Compile Include="wTreeElements\Editors\TextBoxEditor.cs" />
+    <Compile Include="wTreeElements\TreeHandlers\EditorHandlerClass.cs" />
+    <Compile Include="wTreeElements\TreeHandlers\wTreeMouseEventsHandler.cs" />
+    <Compile Include="wTreeElements\TreeHandlers\wTreeScroll.cs" />
+    <Compile Include="wTreeElements\TreeHandlers\wTreeSelections.cs" />
+    <Compile Include="wTreeElements\wTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="wTreeElements\wTree.Designer.cs">
+      <DependentUpon>wTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="wTreeElements\Editors\wTreeEditor.cs" />
+    <Compile Include="wTreeElements\wTreeInterfaces.cs" />
+    <Compile Include="wTreeElements\Nodes\wTreeNode.cs" />
+    <Compile Include="wTreeElements\Nodes\wTreeNodeCollection.cs" />
+    <Compile Include="wTreeElements\Nodes\wTreeNodeEnums.cs" />
+    <Compile Include="wTreeElements\Nodes\wTreeNodeEvents.cs" />
+    <Compile Include="wTreeElements\Nodes\wTreeNodeItem.cs" />
+    <Compile Include="wTreeElements\Nodes\wTreeNodeItemCollection.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="wTreeElements\Editors\ImageSelectorDialog.resx">
+      <DependentUpon>ImageSelectorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wTreeElements\wTree.resx">
+      <DependentUpon>wTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\check_blue.png" />
+    <Content Include="Images\check_blue_press.png" />
+    <Content Include="Images\check_blue_small.png" />
+    <Content Include="Images\check_inter_small.png" />
+    <Content Include="Images\check_normal_disabled_small.png" />
+    <Content Include="Images\check_normal_small.png" />
+    <Content Include="Images\check_red.png" />
+    <Content Include="Images\check_red_press.png" />
+    <Content Include="Images\check_red_small.png" />
+    <Content Include="Images\inter.png" />
+    <Content Include="Images\inter_press.png" />
+    <Content Include="Images\minus.png" />
+    <Content Include="Images\normal.png" />
+    <Content Include="Images\normal_press.png" />
+    <Content Include="Images\plus.png" />
+    <Content Include="Images\RadioBlue.png" />
+    <Content Include="Images\RadioBlue_small.png" />
+    <Content Include="Images\RadioDisabled.png" />
+    <Content Include="Images\RadioDisabled_small.png" />
+    <Content Include="Images\RadioGreen.png" />
+    <Content Include="Images\RadioGreen_small.png" />
+    <Content Include="Images\RadioOrange.png" />
+    <Content Include="Images\RadioOrange_small.png" />
+    <Content Include="Images\RadioRed.png" />
+    <Content Include="Images\RadioRed_small.png" />
+    <Content Include="Images\Radio_Back.png" />
+    <Content Include="Images\Radio_Back_small.png" />
+    <Content Include="Libs\DataHandling_1.0.2.dll" />
+    <Content Include="wTreeElements\Images\check_blue.png" />
+    <Content Include="wTreeElements\Images\check_blue_press.png" />
+    <Content Include="wTreeElements\Images\check_red.png" />
+    <Content Include="wTreeElements\Images\check_red_press.png" />
+    <Content Include="wTreeElements\Images\inter.png" />
+    <Content Include="wTreeElements\Images\inter_press.png" />
+    <Content Include="wTreeElements\Images\normal.png" />
+    <Content Include="wTreeElements\Images\normal_press.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

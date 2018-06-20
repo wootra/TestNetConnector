@@ -1,0 +1,9 @@
+<Peer>
+  <Envs>
+    <Env Name="GroupName">Group1</Env>
+    <Env Name="IP">127.0.0.1</Env>
+    <Env Name="Port">3009</Env>
+    <Env Name="ResponseMode">EchoSelected</Env>
+    <Env Name="ConnPos">Server</Env>
+  </Envs>
+</Peer>

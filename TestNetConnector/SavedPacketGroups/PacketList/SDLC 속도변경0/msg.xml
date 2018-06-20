@@ -1,0 +1,44 @@
+<Packet>
+  <Infos Comment="aaa" LastModified="2012-07-10 오전 10:25:25">
+    <Info />
+    <Info />
+  </Infos>
+  <Items>
+    <Item Name="in_command" Type="short" IsSwap="False" Size="1">
+      <InitValue>0x0001</InitValue>
+    </Item>
+    <Item Name="in_tag" Type="short" IsSwap="False" Size="1">
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="timeTag" Type="int" IsSwap="False" Size="4">
+      <InitValue>           0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="size" Type="int" IsSwap="False" Size="1">
+      <InitValue>13</InitValue>
+    </Item>
+    <Item Name="command" Type="byte" IsSwap="False" Size="1">
+      <InitValue>0x11</InitValue>
+    </Item>
+    <Item Name="ch" Type="byte" IsSwap="False" Size="1">
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="cpu_board_id" Type="short" IsSwap="False" Size="1">
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="sn" Type="int" IsSwap="False" Size="1">
+      <InitValue>1</InitValue>
+    </Item>
+    <Item Name="size" Type="short" IsSwap="False" Size="1">
+      <InitValue>1</InitValue>
+    </Item>
+    <Item Name="state" Type="byte" IsSwap="False" Size="1">
+      <InitValue>0x01</InitValue>
+    </Item>
+    <Item Name="chsum" Type="short" IsSwap="False" Size="1">
+      <InitValue>1</InitValue>
+    </Item>
+  </Items>
+</Packet>

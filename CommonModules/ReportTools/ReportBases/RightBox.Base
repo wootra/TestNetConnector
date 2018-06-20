@@ -1,0 +1,18 @@
+          <Textbox Name="RightBox_[:Name:]">
+            <Top>[:TopCm:]cm</Top>
+            <Style>
+              <FontFamily>gulim</FontFamily>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>3</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0cm</Left>
+            <Height>0.74074cm</Height>
+            <Width>[:TotalWidth:]cm</Width>
+            <Value>[:Value:]</Value>
+          </Textbox>
+		

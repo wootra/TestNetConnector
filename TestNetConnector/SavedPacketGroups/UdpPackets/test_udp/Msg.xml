@@ -1,0 +1,17 @@
+<Packet>
+  <Infos Comment="" LastModified="2013-01-14 오후 7:24:18">
+    <Info />
+    <Info />
+  </Infos>
+  <Items>
+    <Item Name="index" Type="uint" IsSwap="False" Visible="True" Var="Index" Size="1">
+      <InitValue>@index</InitValue>
+    </Item>
+    <Item Name="c" Type="uchar" IsSwap="False" Visible="True" Size="1">
+      <InitValue>3</InitValue>
+    </Item>
+    <Item Name="d" Type="char" IsSwap="False" Visible="True" Size="1">
+      <InitValue>1</InitValue>
+    </Item>
+  </Items>
+</Packet>

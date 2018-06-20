@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="[:DataSourceName:]">
+      <rd:DataSourceID>8ce6629b-9e37-49db-8795-81be03edf313</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>
+        </DataProvider>
+        <ConnectString>
+        </ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>[:TotalWidth:]cm</InteractiveWidth>
+  <rd:GridSpacing>0.1cm</rd:GridSpacing>
+  <rd:SnapToGrid>false</rd:SnapToGrid>
+  <Language>ko-KR</Language>
+  <TopMargin>1cm</TopMargin>
+  <RightMargin>1cm</RightMargin>
+  <LeftMargin>1cm</LeftMargin>
+  <BottomMargin>1cm</BottomMargin>
+  <rd:ReportID>8d061e1a-1209-4d21-bde7-905c92f3afab</rd:ReportID>
+  <PageWidth>[:PageWidth:]cm</PageWidth>
+  <PageHeight>[:PageHeight:]cm</PageHeight>
+  <DataSets>
+    <DataSet Name="[:DataSetName:]">
+      <Fields>
+	    [/Fields/]
+      </Fields>
+      <Query>
+        <DataSourceName>[:DataSourceName:]</DataSourceName>
+        <CommandText>[:CommandText:]
+        </CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>[:DataSetName:]</rd:DataSetName>
+        <rd:TableName>[:TableName:]</rd:TableName>
+        <rd:TableAdapterName>[:TableAdapterName:]</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>
+        </rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>
+        </rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Width>[:TotalWidth:]cm</Width>
+   <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      [/TitleItems/]
+      <Table Name="table1">
+        <DataSetName>[:DataSetName:]</DataSetName>
+        <Top>[:TitleItemCount:]cm</Top>
+        <Left>[:TableLeft:]cm</Left>
+        <Details>
+          <TableRows>
+			      <TableRow>
+              <TableCells>
+				       [/FieldCells/]
+			        </TableCells>
+              <Height>0.53333cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>				
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+				      [/HeaderCells/]
+			        </TableCells>
+              <Height>0.55873cm</Height>
+            </TableRow>
+            [/TableRows/]
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <TableColumns>
+		       [/TableColumns/]
+		    </TableColumns>
+        <Height>1.09206cm</Height>
+      </Table>
+    </ReportItems>
+    <Height>13.25cm</Height>
+  </Body>
+
+</Report>  
+
+	

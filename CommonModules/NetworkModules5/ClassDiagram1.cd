@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="NetworkModules.BufferQueue" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAgAAAAAAAAAAAAAAREAAAAAAAAAAAABAAAQAA=</HashCode>
+      <FileName>DataHandling\BufferQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkModules.StringHandling">
+    <Position X="7.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAAAAAIAAAACAAAAACAEAAAAAAAAgAgAAAAAAAAA=</HashCode>
+      <FileName>DataHandling\StringHandling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkModules.TypeHandling" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAEACAAIAAMAAAAgAAEAAAEAABAgAAAAAAAAAAA=</HashCode>
+      <FileName>DataHandling\TypeHandling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkModules.NetFunctions" Collapsed="true">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>NetFunctions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkModules.NetUsable&lt;T&gt;" Collapsed="true">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAgAAA+ACAAAAAAAAAAAwAQAEAAggAAAUAAAAA=</HashCode>
+      <FileName>NetUsable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkModules.NetUsableAPI&lt;U, T&gt;" Collapsed="true">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAIAgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NetUsableAPI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkModules.ConnectionEventArgs" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>NetworkEvent\ConnectionEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkModules.NetworkErrorEventArgs" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAABgA=</HashCode>
+      <FileName>NetworkEvent\NetworkErrorEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkModules.NetworkObject&lt;T&gt;">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JQAAAAQgAAkEECAAAAIoABAQAQAAAABBAABAAAAgIAA=</HashCode>
+      <FileName>PacketObjects\NetworkObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkModules.NetworkObjectBase" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQAAAAQCAQgEEBQAAAAAEAAAgRAAAABBAAAAAQCAkAA=</HashCode>
+      <FileName>PacketObjects\NetworkObjectBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkModules.TcpEchoServerSample" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAACAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Samples\TcpEchoServerSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkModules.SerialConn" Collapsed="true">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAgAwAAAACAADMAAKBAIECAgAQCAAAAAACA=</HashCode>
+      <FileName>SerialConn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkModules.StreamHandler" Collapsed="true">
+    <Position X="4.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACQAAAEAAAEAAkAABAAAAAiBCAAABAAAAAQQAIAgAA=</HashCode>
+      <FileName>StreamHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkModules.TcpServer" Collapsed="true">
+    <Position X="4.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEAIIAAAAAASAEgAACABwAAAAAAEAAgCUQAEAAFAAAA=</HashCode>
+      <FileName>Tcp\TcpServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkModules.Samples.MyUdpClient" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAEAAAQAgAAAAAAAAgAACAAAAAAAAA=</HashCode>
+      <FileName>Samples\MyUdpClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkModules.Samples.MyUdpServer" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAIAAgAAAAQIAAAAAAAAAAAACAAAgACAAA=</HashCode>
+      <FileName>Samples\MyUdpServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetworkModules.Tcp.TcpClientBase" Collapsed="true">
+    <Position X="8.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAABAEEAEAQAEhAQAAIAIAAAAEQABACgAAkEAIEIEY=</HashCode>
+      <FileName>Tcp\TcpClientBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Delegate Name="NetworkModules.ConnectionEventHandler" Collapsed="true">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NetworkEvent\ConnectionEvent.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="NetworkModules.NetworkErrorEventHandler" Collapsed="true">
+    <Position X="4.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>NetworkEvent\NetworkErrorEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>

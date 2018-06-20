@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<?xml-model href="../ComponentSchemas/ScenarioTableSchema.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<ScenarioTable xmlns="http://s2gg.org/schemas/RuleSchemas">
+	<TableInfo>
+		<BaseRowHeight>25</BaseRowHeight>
+	</TableInfo>
+	<Columns>
+		<Column Width="10" Name="col1" ItemType="CheckBox">
+			<CheckBoxProperties TriState="False"/>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column Width="10" Name="col2" ItemType="ImageCheckBox">
+			<ImageCheckBoxProperties HeaderText="ttt" InitValue="0">
+				<CheckImageList>
+					<NormalImage URL="Images/led_gray.png"/>
+					<CheckImage URL="Images/led_green.jpg"/>
+					<InterImage URL="Images/led_red.jpg"/>
+					<DisabledImage URL="Images/led_gray.jpg"/>
+				</CheckImageList>
+			</ImageCheckBoxProperties>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column Width="10" Name="col3" ItemType="ImageCheckBox">
+			<ImageCheckBoxProperties HeaderText="ttt" InitValue="0" CheckColor="Red">
+			</ImageCheckBoxProperties>
+		</Column>
+		<Column Width="10" Name="col4" ItemType="ImageCheckBox">
+			<ImageCheckBoxProperties HeaderText="ttt" InitValue="0" CheckColor="Blue">
+			</ImageCheckBoxProperties>
+		</Column>
+		<Column Width="10" Name="col5" ItemType="ComboBox">
+			<ComboBoxProperties  HeaderText="test">
+				<SingleSelItems SelectedIndex="0">
+					<SingleSelItem>항목1</SingleSelItem>
+					<SingleSelItem>항목2</SingleSelItem>
+					<SingleSelItem>항목3</SingleSelItem>
+				</SingleSelItems>
+			</ComboBoxProperties>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column Width="10" Name="col6" ItemType="RadioButton">
+			<RadioButtonProperties HeaderText="ttt">
+				<SingleSelItems  SelectedIndex="0">
+					<SingleSelItem>항목1</SingleSelItem>
+					<SingleSelItem>항목2</SingleSelItem>
+					<SingleSelItem>항목3</SingleSelItem>
+				</SingleSelItems>
+			</RadioButtonProperties>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column Width="10" Name="col7" ItemType="CheckBoxGroup">
+			<CheckBoxGroupProperties HeaderText="ttt">
+				<MultiSelItems>
+					<MultiSelItem Checked="true">항목1</MultiSelItem>
+					<MultiSelItem Checked="true">항목2</MultiSelItem>
+					<MultiSelItem Checked="false">항목3</MultiSelItem>
+				</MultiSelItems>
+			</CheckBoxGroupProperties>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column Width="10" Name="col8" ItemType="Image">
+			<ImageProperties HeaderText="ttt" TitleShowImage="-1">
+				<ImageList>
+					<Image URL="Images/AUTO.png"/>
+					<Image URL="Images/AUTO.png"/>
+					<Image URL="Images/AUTO.png"/>
+				</ImageList>
+			</ImageProperties>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column Width="10" Name="col9" ItemType="ImageButton">
+      <ImageButtonProperties HeaderText="ttt" ShowTitleText="true" UseColumnTextForButtonValue="false" TitleShowImage="-1">
+        <ImageList>
+          <Image URL="Images/AUTO.png"/>
+          <Image URL="Images/AUTO.png"/>
+          <Image URL="Images/AUTO.png"/>
+        </ImageList>
+			</ImageButtonProperties>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column Width="10" Name="col10" ItemType="ImageButton">
+			<ImageButtonProperties HeaderText="ttt" ShowTitleText="true" UseColumnTextForButtonValue="false" TitleShowImage="-1"/>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column Width="10" Name="col11" ItemType="Button">
+			<ButtonProperties HeaderText="ttt" BaseText="BtnTest"/>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column Width="10" Name="col12" ItemType="CloseButton">
+			<CloseButtonProperties HeaderText="ttt" BaseText="BtnTest"/>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column Width="10" Name="col13" ItemType="TextBox">
+			<TextBoxProperties HeaderText="ttt" Editable="true" IsAutoSort="false" TextAlignMode="None" />
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column Width="10" Name="col14" ItemType="KeyValue">
+			<KeyValueProperties HeaderText="ttt" TextAlignMode="None"/>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column Width="10" Name="col15" ItemType="FileOpenBox">
+			<FileOpenBoxProperties HeaderText="ttt" Editable="false" TextAlignMode="None"/>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>		
+		<Column Width="10" Name="col16" ItemType="Various">
+			<VariousProperties HeaderText="ttt"/>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+	</Columns>
+	<Rows>
+		<Row Name="row1">
+			<RowInfo>
+				<Height>21</Height>
+				<RelativeObjects>
+					<Object Name="Test" Value="abc"/>
+					<Object Name="Test" Value="abc"/>
+				</RelativeObjects>
+			</RowInfo>
+			<Cells>
+				<Cell Value="0"></Cell><!--CheckBox-->
+				<Cell Value="0"/><!--ImageCheckBox-->
+				<Cell Value="0"/><!--ImageCheckBox-->
+				<Cell Value="0"/><!--ImageCheckBox-->
+				<Cell Value="0"/><!--ComboBox-->
+				<Cell Value="0"/><!--RadioButton-->
+				<Cell Value="1 1 0"/><!--CheckBoxGroup-->
+				<Cell Value="0"/><!--Image-->
+				<Cell><!--ImageButton-->
+					<ItemInfo ItemType="ImageButton">
+            <ImageList>
+              <Image URL="Images/AUTO.png"/>
+              <Image URL="Images/AUTO.png"/>
+              <Image URL="Images/AUTO.png"/>
+            </ImageList>
+						<SelectedIndex Value="0"/>
+						<Text Value="btn"/>
+						<ImageLayout Value="None"/>
+					</ItemInfo>
+				</Cell>
+				<Cell Value="0"/><!--ImageButton-->
+				<Cell Value="Send"/><!--Button-->
+        <Cell Value="Close"/><!--CloseButton-->
+        <Cell Value="TextBox"/><!--TextBox-->
+				<Cell><!--KeyValue-->
+					<ItemInfo ItemType="KeyValue">
+						<KeyValueColorCollection>
+							<Item Key="test1" Value="tt" Color="Red"/>
+							<Item Key="test2" />
+							<Item Key="test3" Color="Black"/>
+						</KeyValueColorCollection>
+					</ItemInfo>
+				</Cell>
+				<Cell/><!--FileOpenBox-->
+				<Cell><!--Various-->
+					<ItemInfo ItemType="TextBox">
+						<Text Value="test"/>
+					</ItemInfo>
+				</Cell>
+			</Cells>
+		</Row>
+		<Row Name="row2">
+			<RowInfo/>
+      <ChosenCells>
+        <Cell ColumnName="col9">
+          <ItemInfo ItemType="ImageButton">
+            <ImageList>
+              <Image URL="a.jpg"/>
+              <Image URL="b.jpg"/>
+              <Image URL="c.jpg"/>
+            </ImageList>
+            <SelectedIndex Value="0"/>
+            <Text Value="btn"/>
+            <ImageLayout Value="None"/>
+          </ItemInfo>
+        </Cell>
+        <Cell ColumnName="col14">
+          <ItemInfo ItemType="KeyValue">
+            <KeyValueColorCollection>
+              <Item Key="test1" Value="tt" Color="Red"/>
+              <Item Key="test2" />
+              <Item Key="test3" Color="Black"/>
+            </KeyValueColorCollection>
+          </ItemInfo>
+        </Cell>
+        <Cell ColumnName="col16">
+          <ItemInfo ItemType="TextBox">
+            <Text Value="test"/>
+          </ItemInfo>
+        </Cell>
+      </ChosenCells>
+		</Row>	
+	</Rows>
+</ScenarioTable>

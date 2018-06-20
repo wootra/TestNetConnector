@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://s2gg.org/schemas/RuleSchemas" xmlns="http://s2gg.org/schemas/RuleSchemas"
+           xmlns:colors="http://s2gg.org/schemas/TypeSchemas/Color">
+  <xs:import namespace="http://s2gg.org/schemas/TypeSchemas/Color" schemaLocation="ColorRuleSchema.xsd"/>
+  <xs:include schemaLocation="GlobalTypesRuleSchema.xsd"/>
+  <xs:complexType name="LabelType">
+    <xs:complexContent>
+      <xs:extension base="SimpleComponentBaseType">
+        <xs:attribute name="Text" type="xs:string" use="required" />
+        <xs:attribute name="TextAlign" type="ContentAlignment" use="optional" />
+        <xs:attribute name="TextColor" type="colors:ColorType" use="optional" />
+        <xs:attribute name="BackColor" type="colors:ColorType" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="ImageLedType">
+    <xs:complexContent>
+      <xs:extension base="SimpleComponentBaseType">
+        <xs:sequence>
+          <xs:element name="ImageList" type="LedImageListType" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="State" type="LedStateType" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:simpleType name="LedStateType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Off"/>
+      <xs:enumeration value="On"/>
+      <xs:enumeration value="MidState"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="LedImageListType">
+    <xs:sequence>
+      <xs:element name="OffImage">
+        <xs:complexType>
+          <xs:attribute name="URL" type="xs:anyURI" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="OnImage">
+        <xs:complexType>
+          <xs:attribute name="URL" type="xs:anyURI" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="MidStateImage">
+        <xs:complexType>
+          <xs:attribute name="URL" type="xs:anyURI" use="required" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="TextBoxType">
+    <xs:complexContent>
+      <xs:extension base="SimpleComponentBaseType">
+        <xs:sequence minOccurs="0" maxOccurs="1">
+          <xs:element name="Events">
+            <xs:complexType>
+              <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                <xs:element name="OnClick" type="EventType"></xs:element>
+                <xs:element name="OnTextChanged" type="EventType"/>
+                <xs:element name="OnLostFocus" type="EventType"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="Text" type="xs:string" use="required" />
+        <xs:attribute name="TextAlign" type="TextHorizontalAligns" use="optional" />
+        <xs:attribute name="TextColor" type="colors:ColorType" use="optional" />
+        <xs:attribute name="BackColor" type="colors:ColorType" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="TextAreaType">
+    <xs:complexContent>
+      <xs:extension base="SimpleComponentBaseType">
+        <xs:sequence minOccurs="0" maxOccurs="1">
+          <xs:element name="Events" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+              <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                <xs:element name="OnClick" type="EventType"></xs:element>
+                <xs:element name="OnTextChanged" type="EventType"/>
+                <xs:element name="OnLostFocus" type="EventType"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="BufferSize" type="xs:unsignedInt" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="SaveFile" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+              <xs:attribute name="Path" type="xs:anyURI" use="optional"/>
+              <xs:attribute name="SavingFormat" type="SavingFormatType" use="optional"/>
+              <xs:attribute name="Extension" type="xs:string" use="optional"/>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="Text" type="xs:string" use="optional" />
+        <xs:attribute name="TextColor" type="colors:ColorType" use="optional" />
+        <xs:attribute name="BackColor" type="colors:ColorType" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:simpleType name="SavingFormatType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="yyyyMMdd_HHmmss"/>
+      <xs:enumeration value="yyMMdd_HHmmss"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="CustomComponentType">
+    <xs:complexContent>
+      <xs:extension base="SimpleComponentBaseType">
+        <xs:sequence minOccurs="0" maxOccurs="1">
+          <xs:element name="Events">
+            <xs:complexType>
+              <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                <xs:element name="CustomEvent" type="CustomEventType"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+        
+        <xs:attribute name="ControlName" type="xs:string"/>
+        <xs:anyAttribute/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+      
+  <xs:complexType name="ButtonType">
+    <xs:complexContent>
+      <xs:extension base="SimpleComponentBaseType">
+        <xs:sequence minOccurs="0" maxOccurs="1">
+          <xs:element name="Events">
+            <xs:complexType>
+              <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                <xs:element name="OnClick" type="EventType"></xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="Text" type="xs:string" use="required" />
+        <xs:attribute name="TextAlign" type="ContentAlignment" use="optional" />
+        <xs:attribute name="TextColor" type="colors:ColorType" use="optional" />
+        <xs:attribute name="BackColor" type="colors:ColorType" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+      
+      
+  <xs:complexType name="ImageButtonType">
+    <xs:complexContent>
+      <xs:extension base="SimpleComponentBaseType">
+        <xs:sequence maxOccurs="1">
+          <xs:element name="Images" type="ImageListType" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Events" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+              <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                <xs:element name="OnClick" type="EventType"></xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="Text" type="xs:string" use="required" />
+        <xs:attribute name="DisabeldImageIndex" type="xs:int" use="optional"/>
+        <xs:attribute name="ActivationColor" type="colors:ColorType" use="optional"/>
+        <xs:attribute name="TextColor" type="colors:ColorType" use="optional" />
+        <xs:attribute name="BackColor" type="colors:ColorType" use="optional" />
+        <xs:attribute name="ImageLayout" type="ImageLayouts" use="optional" />
+        <xs:attribute name="TextAlign" type="ContentAlignment" use="optional" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="SimpleComponentBaseType">
+    <xs:sequence>
+      <xs:sequence minOccurs="0" maxOccurs="1">
+        <xs:element name="Arguments">
+          <xs:complexType mixed="true">
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="Argument">
+                <xs:complexType mixed="true">
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="Name" type="xs:string"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:sequence>
+    <xs:attribute name="Enabled" type="xs:boolean" use="optional" />
+    <xs:attribute name="Margin" type="PaddingType" use="optional" />
+    <xs:attribute name="Padding" type="PaddingType" use="optional" />
+    <xs:attribute name="Dock" type="DockStyles" use="optional"/>
+    <xs:attribute name="Anchor" type="AnchorStyles" use="optional"/>
+    <xs:attribute name="Ref" type="xs:anyURI" use="optional" />
+  </xs:complexType>
+
+</xs:schema>

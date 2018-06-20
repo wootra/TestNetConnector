@@ -1,0 +1,4 @@
+        <Field Name="[:FieldName:]">
+          <DataField>[:FieldName:]</DataField>
+          <rd:TypeName>[:TypeName:]</rd:TypeName>
+        </Field>

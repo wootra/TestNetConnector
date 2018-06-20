@@ -1,0 +1,18 @@
+    <DataSet Name="[:DataSetName:]">
+      <Query>
+        <DataSourceName>[:DataSourceName:]</DataSourceName>
+        <CommandText>[:CommandText:]</CommandText>
+      </Query>
+      <Fields>
+        [/Fields/]
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>[:DataSetName:]</rd:DataSetName>
+        <rd:TableName>[:TableName:]</rd:TableName>
+        <rd:TableAdapterName>[:TableAdapterName:]</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>
+        </rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>
+        </rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>

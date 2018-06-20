@@ -1,0 +1,89 @@
+<Packet>
+  <Infos Comment="" LastModified="2013-01-14 오후 6:38:00">
+    <Info />
+    <Info />
+  </Infos>
+  <Items>
+    <Item Name="in_command" Type="short" IsSwap="False" Visible="True" Size="1">
+      <InitValue>0x0001</InitValue>
+    </Item>
+    <Item Name="in_tag" Type="short" IsSwap="False" Visible="True" Size="1">
+      <InitValue>1</InitValue>
+    </Item>
+    <Item Name="times" Type="int" IsSwap="False" Visible="True" Size="4">
+      <InitValue>1</InitValue>
+      <InitValue>2</InitValue>
+      <InitValue>3</InitValue>
+      <InitValue>4</InitValue>
+    </Item>
+    <Item Name="size" Type="int" IsSwap="False" Visible="True" Size="1">
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="command" Type="byte" IsSwap="False" Visible="True" Size="1">
+      <InitValue>0x80</InitValue>
+    </Item>
+    <Item Name="ch" Type="byte" IsSwap="False" Visible="True" Size="1">
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="cpu_board_id" Type="short" IsSwap="False" Visible="True" Size="1">
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="sn" Type="int" IsSwap="False" Visible="True" Size="1">
+      <InitValue>1</InitValue>
+    </Item>
+    <Item Name="size" Type="short" IsSwap="False" Visible="True" Size="1">
+      <InitValue>32</InitValue>
+    </Item>
+    <Item Name="d1" Type="byte" IsSwap="False" Visible="True" Size="15">
+      <InitValue>1</InitValue>
+      <InitValue>1</InitValue>
+      <InitValue>1</InitValue>
+      <InitValue>1</InitValue>
+      <InitValue>1</InitValue>
+      <InitValue>1</InitValue>
+      <InitValue>1</InitValue>
+      <InitValue>1</InitValue>
+      <InitValue>1</InitValue>
+      <InitValue>1</InitValue>
+      <InitValue>1</InitValue>
+      <InitValue>1</InitValue>
+      <InitValue>1</InitValue>
+      <InitValue>1</InitValue>
+      <InitValue>1</InitValue>
+    </Item>
+    <Item Name="d2" Type="byte" IsSwap="False" Visible="True" Size="3">
+      <InitValue>1</InitValue>
+      <InitValue>1</InitValue>
+      <InitValue>1</InitValue>
+    </Item>
+    <Item Name="ccdl" Type="byte" IsSwap="False" Visible="True" Size="1">
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="dout" Type="byte" IsSwap="False" Visible="True" Size="3">
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="squib" Type="byte" IsSwap="False" Visible="True" Size="2">
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="can" Type="byte" IsSwap="False" Visible="True" Size="2">
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="uart" Type="byte" IsSwap="False" Visible="True" Size="2">
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="temp" Type="byte" IsSwap="False" Visible="True" Size="4">
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="chsum" Type="ushort" IsSwap="False" Visible="True" Size="1">
+      <InitValue>0x81</InitValue>
+    </Item>
+  </Items>
+</Packet>

@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F2878C4B-6008-42CD-987E-68049BD6804E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestNetConnector</RootNamespace>
+    <AssemblyName>TestNetConnector</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\BuildPrograms\TestNetConnector\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>transfer.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConControllers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConControllers.Designer.cs">
+      <DependentUpon>ConControllers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConMsgList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConMsgList.Designer.cs">
+      <DependentUpon>ConMsgList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentWindows\PeerGroupTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContentWindows\PeerGroupTree.Designer.cs">
+      <DependentUpon>PeerGroupTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Con_PacketGroups.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Con_PacketGroups.Designer.cs">
+      <DependentUpon>Con_PacketGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Con_Peer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Con_Peer.Designer.cs">
+      <DependentUpon>Con_Peer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dataHistory.cs" />
+    <Compile Include="DlgDefineStruct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgDefineStruct.Designer.cs">
+      <DependentUpon>DlgDefineStruct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgMsgMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgMsgMaker.Designer.cs">
+      <DependentUpon>DlgMsgMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgViewStruct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgViewStruct.Designer.cs">
+      <DependentUpon>DlgViewStruct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpPopup.Designer.cs">
+      <DependentUpon>HelpPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SavedList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SavedList.Designer.cs">
+      <DependentUpon>SavedList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestNetConnector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestNetConnector.Designer.cs">
+      <DependentUpon>TestNetConnector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ValueForm.Designer.cs">
+      <DependentUpon>ValueForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ConControllers.resx">
+      <DependentUpon>ConControllers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConMsgList.resx">
+      <DependentUpon>ConMsgList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Con_PacketGroups.resx">
+      <DependentUpon>Con_PacketGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Con_Peer.resx">
+      <DependentUpon>Con_Peer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgDefineStruct.resx">
+      <DependentUpon>DlgDefineStruct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgMsgMaker.resx">
+      <DependentUpon>DlgMsgMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgViewStruct.resx">
+      <DependentUpon>DlgViewStruct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpPopup.resx">
+      <DependentUpon>HelpPopup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SavedList.resx">
+      <DependentUpon>SavedList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestNetConnector.resx">
+      <DependentUpon>TestNetConnector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ValueForm.resx">
+      <DependentUpon>ValueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonModules\CParser\CustomParser.csproj">
+      <Project>{957fb838-a689-421b-9a8e-1d0af2abebcf}</Project>
+      <Name>CustomParser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonModules\CSEval\CSEval.csproj">
+      <Project>{1af91a16-3e43-4dc9-afac-9a09d1d52a66}</Project>
+      <Name>CSEval</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonModules\DataHandling\DataHandling.csproj">
+      <Project>{dd26fecd-753b-4276-8932-da1a968db017}</Project>
+      <Name>DataHandling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonModules\FormAdders\FormAdders.csproj">
+      <Project>{18755249-FEA8-4F9F-85A2-294A77AAC115}</Project>
+      <Name>FormAdders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonModules\IOHandling\IOHandling.csproj">
+      <Project>{82326147-BC03-4C2F-A67C-EC1D88C929CD}</Project>
+      <Name>IOHandling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonModules\NetworkModules4\NetworkModules4.csproj">
+      <Project>{D9777D70-374B-40E9-A81F-1C7D05603B0C}</Project>
+      <Name>NetworkModules4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonModules\NetworkPackets\NetworkPackets.csproj">
+      <Project>{B515B4F6-2725-41C9-BCE5-AB4CC9468466}</Project>
+      <Name>NetworkPackets</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonModules\RtwEnums\RtwEnums.csproj">
+      <Project>{80D91927-C689-47F8-B94C-337C5AB0C8C7}</Project>
+      <Name>RtwEnums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonModules\XmlHandlers\XmlHandlers.csproj">
+      <Project>{674a4478-5d0c-437e-a84b-84229661a430}</Project>
+      <Name>XmlHandlers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Libs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\transfer.ico" />
+    <Content Include="transfer.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

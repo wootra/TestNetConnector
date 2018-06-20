@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Net Connector is a program to validate network packets between server and client.
+You can use it by sending, receiving and analyzing packets that you made in Msg pane.
+
+This is the basic usage.
+Msg: Build the packets to send. grammer is like this.
+Usage: type1,value1/type2,value2,value3,value4/type3,value5,value6,value7...
+ex) int,1/short,1,2,3,4/byte,1,2/double,0.1,0.223,0.333/ushort,1,2,3
+valid types are : string,int,short,byte,long(32 bits),long long,uint,ushort,ulong(64 bits),byte,float,double.
+Save Send: Send packets in Msg list
+Make Msg: You can make new packets with c-like grammer
+
+Timeout : (Predicated) set timeout in Tcp communication
+ResponseTimer : Send selected msg ONCE at the time you set
+Conn Mode : Select one of Tcp/Udp modes
+ConnPos: Select if the peer you are setting is server or client
+Analyze Tool: Analyze binary packet to the selected type of values. If you change it, the lastest received packet is analyzed and added into the log list.
+If you want to receive the data with the selected type, Set in the Menu &gt; Data &gt; Format
+Header Define: (Predicated) Getting header size
+
+Menu:
+File&gt;Load : Load a saved msg or configurations.
+To load contents in MakeMsg, use File&gt;Load&gt;Send Struct
+
+File&gt;Save: Save current msg or configuration.
+To save packet structures in MakeMsg( C grammer), use File&gt;Save&gt;Struct
+Network&gt;Response Mode : Choose if the peer to response right after the peer receive a packet.
+    - Echo Received : return the same packet that the peer received.
+   - Echo My Msg: return selected msg in Msg List
+Data&gt;Endian : Set if it will use Big/Little endian. It will affect to both sending and receiving.
+Data&gt;Encoding : Set the encoding when you communicate with String.
+Data&gt;Type Size : Show packets seperated with the size you want.
+Data&gt;Type Size&gt;Struct : Show packets seperated with the form of a struct you set in  Data&gt;Struct&gt;Define in the menu
+Data&gt;Struct&gt;View : Show the lastest received data in a dialog with the form you set in Data&gt;Struct&gt;Define in the menu</value>
+  </data>
+  <data name="richTextBox2.Text" xml:space="preserve">
+    <value>You can communicate with multiple NetConnector peers at the same time using multiple ports
+When you press Make Msg, Input dialog opens. 
+If the message is mixed with Big/Little Endian together, Set base endian with Data&gt;Endian menu, add swap@ before variable in MakeMsg dialog.
+ex&gt;
+int id=1234;
+int size=256;
+uint tag=0x0907;
+short swap@id[100]=123;
+
+in the example, you can add 100 number of 123 with swapped short value 123.
+
+To set default value, you can set one of these types:
+Integer(Decimal), Binary(Binary), Hex integer(Hex), Octal Integer(Oct), floating point value(Float), log value(ELog), Text value(String).
+If you want to use floating point value, the type of value has to be one of float or double type, 
+and use string type for text values.
+if you want to use hex integer as default value, the variable type MUST be unsigned type. 
+
+NetConnector support such types for your convenience:
+unsigned int, uint, uint32, unsigned short, ushort, uint16, ...
+
+If you want to use binary code, add 'B' before numbers
+
+예&gt; 
+int a=123; //integer
+uint b=0x123f; //hex integer
+int c=B1234; //binary
+int d=01235; //octal integer
+float e=1.234; //floating point
+double f=1.0e-12; //log value
+string g=my golden bell; //text
+string h="my golden bell"; //quote will be included when you send
+</value>
+  </data>
+</root>

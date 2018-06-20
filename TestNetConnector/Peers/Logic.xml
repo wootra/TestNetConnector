@@ -1,0 +1,10 @@
+<Peer>
+  <Envs>
+    <Env Name="ConnMode">Tcp</Env>
+    <Env Name="GroupName">Group1</Env>
+    <Env Name="Port">5100</Env>
+    <Env Name="IP">127.0.0.1</Env>
+    <Env Name="ResponseMode">EchoNext</Env>
+    <Env Name="ConnPos">Server</Env>
+  </Envs>
+</Peer>

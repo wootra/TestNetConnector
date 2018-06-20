@@ -1,0 +1,10 @@
+<Peer>
+  <Envs>
+    <Env Name="Port">5502</Env>
+    <Env Name="ConnPos">Server</Env>
+    <Env Name="IP">127.0.0.1</Env>
+    <Env Name="GroupName">m1553cmds</Env>
+    <Env Name="ResponseMode">EchoSelected</Env>
+    <Env Name="MsgFormat">Hex</Env>
+  </Envs>
+</Peer>

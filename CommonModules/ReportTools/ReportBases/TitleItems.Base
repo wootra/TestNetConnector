@@ -1,0 +1,85 @@
+<Textbox Name="StartDateBox">
+  <Top>2cm</Top>
+  <Style>
+    <FontFamily>gulim</FontFamily>
+    <TextAlign>Right</TextAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+  <ZIndex>3</ZIndex>
+  <CanGrow>true</CanGrow>
+  <Left>0cm</Left>
+  <Height>0.74074cm</Height>
+  <Width>[:TotalWidth:]cm</Width>
+  <Value>Start Time: [:StartDate:]</Value>
+</Textbox>
+<Textbox Name="EndDateBox">
+  <Top>3cm</Top>
+  <Style>
+    <FontFamily>gulim</FontFamily>
+    <TextAlign>Right</TextAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+  <ZIndex>4</ZIndex>
+  <CanGrow>true</CanGrow>
+  <Left>0cm</Left>
+  <Height>0.74074cm</Height>
+  <Width>[:TotalWidth:]cm</Width>
+  <Value>End Time: [:EndDate:]</Value>
+</Textbox>
+<Textbox Name="UserBox">
+  <Top>1.25cm</Top>
+  <Style>
+    <FontFamily>gulim</FontFamily>
+    <TextAlign>Right</TextAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+  <ZIndex>2</ZIndex>
+  <CanGrow>true</CanGrow>
+  <Left>0cm</Left>
+  <Height>0.74074cm</Height>
+  <Width>[:TotalWidth:]cm</Width>
+  <Value>Reporter : [:ReporterName:]</Value>
+</Textbox>
+<Textbox Name="TitleBox">
+  <Style>
+    <Color>#1c3a70</Color>
+    <FontFamily>gulim</FontFamily>
+    <FontSize>18pt</FontSize>
+    <TextAlign>Center</TextAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>2pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+  <ZIndex>1</ZIndex>
+  <CanGrow>true</CanGrow>
+  <Height>1cm</Height>
+  <Width>[:TotalWidth:]cm</Width>
+  <Value>[:Title:]</Value>
+</Textbox>
+<Textbox Name="SubTitleBox">
+  <Style>
+    <Color>#1c3a70</Color>
+    <FontFamily>gulim</FontFamily>
+    <FontSize>16pt</FontSize>
+    <TextAlign>Center</TextAlign>
+    <PaddingLeft>2pt</PaddingLeft>
+    <PaddingRight>2pt</PaddingRight>
+    <PaddingTop>22pt</PaddingTop>
+    <PaddingBottom>2pt</PaddingBottom>
+  </Style>
+  <ZIndex>1</ZIndex>
+  <CanGrow>true</CanGrow>
+  <Height>1cm</Height>
+  <Width>[:TotalWidth:]cm</Width>
+  <Value>[:SubTitle:]</Value>
+</Textbox>

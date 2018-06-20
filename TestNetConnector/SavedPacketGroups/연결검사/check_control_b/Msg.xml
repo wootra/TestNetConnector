@@ -1,0 +1,23 @@
+<Packet>
+  <Infos Comment="" LastModified="2012-10-24 오후 12:20:01">
+    <Info />
+    <Info />
+  </Infos>
+  <Items>
+    <Item Name="cmd" Type="short" IsSwap="False" Size="1">
+      <InitValue>0x0203</InitValue>
+    </Item>
+    <Item Name="tag" Type="short" IsSwap="False" Size="1">
+      <InitValue>2</InitValue>
+    </Item>
+    <Item Name="timeTag" Type="int" IsSwap="False" Size="4">
+      <InitValue>     0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="len" Type="int" IsSwap="False" Size="1">
+      <InitValue>0</InitValue>
+    </Item>
+  </Items>
+</Packet>

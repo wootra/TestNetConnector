@@ -1,0 +1,24 @@
+<TableCell>
+                  <ReportItems>
+                    <Textbox Name="[:FieldName:]">
+                      <rd:DefaultName>[:FieldName:]</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Gulim</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields![:FieldName:].Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+				

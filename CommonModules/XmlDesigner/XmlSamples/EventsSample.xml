@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Events xmlns="http://s2gg.org/schemas/RuleSchemas">
+  <OnClick>
+    <Actions>
+      <Condition>
+        <True/>
+      </Condition>
+      <Action Name="test"></Action>
+
+    </Actions>
+  </OnClick>
+</Events>

@@ -1,0 +1,27 @@
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Header_[:FieldText:]">
+                      <Style>
+                        <TextAlign>Center</TextAlign>
+                        <Color>White</Color>
+                        <BackgroundColor>#1c3a70</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Gulim</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>500</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>[:FieldText:]</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+				

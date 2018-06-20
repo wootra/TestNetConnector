@@ -1,0 +1,6 @@
+            <TablixRow>
+              <Height>[:RowHeight:]cm</Height>
+              <TablixCells>
+                [/ValueCells/]
+              </TablixCells>
+            </TablixRow>

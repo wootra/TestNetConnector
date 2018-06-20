@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{18755249-FEA8-4F9F-85A2-294A77AAC115}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FormAdders</RootNamespace>
+    <AssemblyName>FormAdders</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseIntermediateOutputPath>..\..\..\Temp\Objs\CommonModules\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\BuildPrograms\CommonModules\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <BaseIntermediateOutputPath>..\..\..\Temp\Objs\CommonModules\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <BaseIntermediateOutputPath>..\..\..\Temp\Objs\CommonModules\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\BuildPrograms\CommonModules\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>3</WarningLevel>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\..\BuildPrograms\CommonModules\FormAdders.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\FormAdders.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActiveLabel.Designer.cs">
+      <DependentUpon>ActiveLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoubleBufferedLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DoubleBufferedLabel.Designer.cs">
+      <DependentUpon>DoubleBufferedLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoubleBufferedPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DoubleBufferedPanel.Designer.cs">
+      <DependentUpon>DoubleBufferedPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EasyGridViewCollections\CheckBoxGroup\CellCheckBoxGroupSelectedEventHandler.cs" />
+    <Compile Include="EasyGridViewCollections\CheckBoxGroup\EasyGridCheckBoxGroupCell.cs" />
+    <Compile Include="EasyGridViewCollections\CheckBoxGroup\EasyGridCheckBoxGroupColumn.cs" />
+    <Compile Include="EasyGridViewCollections\EasyGridCell.cs" />
+    <Compile Include="EasyGridViewCollections\EasyGridVariousColumn.cs" />
+    <Compile Include="EasyGridViewCollections\EasyGridVariousTypeCellInfo.cs" />
+    <Compile Include="EasyGridViewCollections\Etc\EasyGridKeyValueCell.cs" />
+    <Compile Include="EasyGridViewCollections\Etc\EasyGridButtonCell.cs" />
+    <Compile Include="EasyGridViewCollections\Etc\EasyGridImageCheckBoxCell.cs" />
+    <Compile Include="EasyGridViewCollections\Etc\EasyGridComboBoxCell.cs" />
+    <Compile Include="EasyGridViewCollections\Etc\EasyGridImageCell.cs" />
+    <Compile Include="EasyGridViewCollections\Etc\EasyGridCheckBoxCell.cs" />
+    <Compile Include="EasyGridViewCollections\Etc\EasyGridCloseButtonCell.cs" />
+    <Compile Include="EasyGridViewCollections\Etc\EasyGridTextBoxCell.cs" />
+    <Compile Include="EasyGridViewCollections\RadioButton\CellRadioButtonSelectedEventHandler.cs" />
+    <Compile Include="EasyGridViewCollections\EasyGridMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EasyGridViewCollections\RadioButton\EasyGridRadioButtonCell.cs" />
+    <Compile Include="EasyGridViewCollections\RadioButton\EasyGridRadioButtonColumn.cs" />
+    <Compile Include="EasyGridViewCollections\EasyGridRow.cs" />
+    <Compile Include="EasyGridViewCollections\EasyGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EasyGridViewCollections\EasyGridView.Designer.cs">
+      <DependentUpon>EasyGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EasyGridViewCollections\EasyGridViewParent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EasyGridViewCollections\Enums.cs" />
+    <Compile Include="EasyGridViewCollections\IEasyGridCell.cs" />
+    <Compile Include="EasyGridViewCollections\PositionOnList.cs" />
+    <Compile Include="EasyGridViewCollections\RowPositionChangedEventHandler.cs" />
+    <Compile Include="EventHandlers\DragLeaveEventHandler.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="EventHandlers\CellTextChangedEventHandler.cs" />
+    <Compile Include="EasyGridViewCollections\EasyGridMenuClickHandler.cs" />
+    <Compile Include="EventHandlers\ItemSelectedEventHandler.cs" />
+    <Compile Include="EventHandlers\CellCheckedEventHandler.cs" />
+    <Compile Include="EventHandlers\CellComboBoxEventHandler.cs" />
+    <Compile Include="EventHandlers\CellClickEventHandler.cs" />
+    <Compile Include="EventHandlers\TreeNodeCheckedEventHandler.cs" />
+    <Compile Include="EventHandlers\TreeNodeEventHandler.cs" />
+    <Compile Include="FineImageList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FineImageListOld.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RtwComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RtwComboBox.Designer.cs">
+      <DependentUpon>RtwComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreeViews\RtwTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImgButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImgButton.Designer.cs">
+      <DependentUpon>ImgButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPAddressInputBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IPAddressInputBox.Designer.cs">
+      <DependentUpon>IPAddressInputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyDialog.Designer.cs">
+      <DependentUpon>MyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NameValuePairs\PairList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NameValuePairs\PairList.Designer.cs">
+      <DependentUpon>PairList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NumberTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OnOffLed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OnOffLed.Designer.cs">
+      <DependentUpon>OnOffLed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="NameValuePairs\NameValuePairList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NameValuePairs\NameValuePairList.Designer.cs">
+      <DependentUpon>NameValuePairList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SyncLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SyncLabel.Designer.cs">
+      <DependentUpon>SyncLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThreeImageLed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThreeImageLed.Designer.cs">
+      <DependentUpon>ThreeImageLed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransparentButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeViews\TriStateTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WindowBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NameValuePairs\NameValueTextPairList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NameValuePairs\NameValueTextPairList.Designer.cs">
+      <DependentUpon>NameValueTextPairList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlGroup.Designer.cs">
+      <DependentUpon>ControlGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LabelGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LabelGroup.Designer.cs">
+      <DependentUpon>LabelGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreeViews\FourTypeTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeViews\RtwTreeView2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ActiveLabel.resx">
+      <DependentUpon>ActiveLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoubleBufferedPanel.resx">
+      <DependentUpon>DoubleBufferedPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EasyGridViewCollections\EasyGridView.resx">
+      <DependentUpon>EasyGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImgButton.resx">
+      <DependentUpon>ImgButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPAddressInputBox.resx">
+      <DependentUpon>IPAddressInputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyDialog.resx">
+      <DependentUpon>MyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NameValuePairs\PairList.resx">
+      <DependentUpon>PairList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnOffLed.resx">
+      <DependentUpon>OnOffLed.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NameValuePairs\NameValuePairList.resx">
+      <DependentUpon>NameValuePairList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NameValuePairs\NameValueTextPairList.resx">
+      <DependentUpon>NameValueTextPairList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RtwComboBox.resx">
+      <DependentUpon>RtwComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SyncLabel.resx">
+      <DependentUpon>SyncLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThreeImageLed.resx">
+      <DependentUpon>ThreeImageLed.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlGroup.resx">
+      <DependentUpon>ControlGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabelGroup.resx">
+      <DependentUpon>LabelGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrowLeft.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrowRight.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Radio_Back.png" />
+    <None Include="Images\RadioBlue.png" />
+    <None Include="Images\RadioGreen.png" />
+    <None Include="Images\RadioOrange.png" />
+    <None Include="Images\RadioRed.png" />
+    <None Include="Images\RadioDisabled.png" />
+    <None Include="Images\Radio_Back_small.png" />
+    <None Include="Images\RadioBlue_small.png" />
+    <None Include="Images\RadioGreen_small.png" />
+    <None Include="Images\RadioOrange_small.png" />
+    <None Include="Images\RadioRed_small.png" />
+    <None Include="Images\RadioDisabled_small.png" />
+    <Content Include="Images\check_blue_small.png" />
+    <Content Include="Images\check_inter_small.png" />
+    <Content Include="Images\check_normal_disabled_small.png" />
+    <Content Include="Images\check_normal_small.png" />
+    <Content Include="Images\check_red_small.png" />
+    <Content Include="Resources\tree_states\rtw_open_tree.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\tree_states\rtw_tree_normal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\tree_states\rtw_tree_selected.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\triangle_close.bmp" />
+    <None Include="Resources\DockPane_TreeClose.bmp" />
+    <None Include="Resources\DockPane_Option.bmp" />
+    <Content Include="Resources\checkbox\check_blue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\checkbox\check_blue_press.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\checkbox\check_red.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\checkbox\check_red_press.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\checkbox\inter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\checkbox\inter_press.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\checkbox\normal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\checkbox\normal_press.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\led_mid.png" />
+    <None Include="Resources\led_mid1.png" />
+    <Content Include="Resources\led_off.png" />
+    <None Include="Resources\Led_off1.png" />
+    <Content Include="Resources\led_on.png" />
+    <None Include="Resources\led_on1.png" />
+    <Content Include="Resources\left_arrow.gif" />
+    <Content Include="Resources\right_arrow.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataHandling\DataHandling.csproj">
+      <Project>{DD26FECD-753B-4276-8932-DA1A968DB017}</Project>
+      <Name>DataHandling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IOHandling\IOHandling.csproj">
+      <Project>{82326147-BC03-4C2F-A67C-EC1D88C929CD}</Project>
+      <Name>IOHandling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RtwEnums\RtwEnums.csproj">
+      <Project>{80D91927-C689-47F8-B94C-337C5AB0C8C7}</Project>
+      <Name>RtwEnums</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

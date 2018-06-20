@@ -1,0 +1,112 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Classic" 
+             x:Class="ListViews.SimpleListTable" 
+             mc:Ignorable="d" 
+             xmlns:lv="clr-namespace:ListViews"
+             d:DesignHeight="300" d:DesignWidth="300" x:Name="SimpleListTable1">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/ListStyle.xaml"/>
+                <ResourceDictionary>
+                    
+                    <DataTemplate x:Key="headerStyle" DataType="{x:Type lv:ListRow}">
+                        <ContentControl Content="{Binding ElementName=SimpleListTable1, Path=Header}" />
+                    </DataTemplate>
+
+                    <Style x:Key="ListBoxItemStyle1" TargetType="{x:Type ListBoxItem}">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ItemsControl}}}"/>
+                        <Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type ItemsControl}}}"/>
+                        <Setter Property="Padding" Value="2,0,0,0"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                    <ControlTemplate.Resources>
+                                        
+                                    </ControlTemplate.Resources>
+                                    <Grid Height="Auto" Width="Auto" d:DesignHeight="30">
+                                        <Rectangle x:Name="Underline" Margin="0" Stroke="{x:Null}" Height="5" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
+                                            <Rectangle.RenderTransform>
+                                                <TransformGroup>
+                                                    <ScaleTransform/>
+                                                    <SkewTransform/>
+                                                    <RotateTransform/>
+                                                    <TranslateTransform/>
+                                                </TransformGroup>
+                                            </Rectangle.RenderTransform>
+                                            <Rectangle.Fill>
+                                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                    <GradientStop Color="#720084FF" Offset="1"/>
+                                                    <GradientStop Color="#55FFFFFF"/>
+                                                </LinearGradientBrush>
+                                            </Rectangle.Fill>
+                                        </Rectangle>
+                                        <Rectangle x:Name="rectangle" Stroke="{x:Null}" RenderTransformOrigin="0.503,0.429" d:IsLocked="True">
+                                            <Rectangle.Fill>
+                                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                    <GradientStop Color="#00000000" Offset="0"/>
+                                                    <GradientStop Color="#00006DFF" Offset="1"/>
+                                                    <GradientStop Color="#00006DFE" Offset="0.539"/>
+                                                </LinearGradientBrush>
+                                            </Rectangle.Fill>
+                                        </Rectangle>
+                                        <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Margin="4,0,0,0" VerticalAlignment="Center" d:IsLocked="True"/>
+                                    </Grid>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsEnabled" Value="False">
+                                            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                                        </Trigger>
+                                        <Trigger Property="Selector.IsSelected" Value="True">
+                                            <Trigger.ExitActions>
+                                                <RemoveStoryboard BeginStoryboardName="MouseOverStory_BeginStoryboard"/>
+                                            </Trigger.ExitActions>
+                                            <Trigger.EnterActions>
+                                                <BeginStoryboard x:Name="MouseOverStory_BeginStoryboard" Storyboard="{StaticResource MousePressStory}"/>
+                                            </Trigger.EnterActions>
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Trigger.ExitActions>
+                                                <BeginStoryboard x:Name="MouseOutStory_BeginStoryboard" Storyboard="{StaticResource MouseOutStory}"/>
+                                            </Trigger.ExitActions>
+                                            <Trigger.EnterActions>
+                                                <BeginStoryboard x:Name="MouseOverStory_BeginStoryboard1" Storyboard="{StaticResource MouseOverStory}"/>
+                                            </Trigger.EnterActions>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        	
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" d:DesignWidth="364" d:DesignHeight="356">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid x:Name="TitleBar">
+            <Rectangle>
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFCCCCCC" Offset="0"/>
+                        <GradientStop Color="White" Offset="0.522"/>
+                        <GradientStop Color="#FFBABABA" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,0,0,0">
+                <UserControl ContentTemplate="{DynamicResource headerStyle}"/>
+            </Grid>
+        </Grid>
+        <ListBox Name="DataList" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.RowSpan="1" Grid.Row="1" Background="{x:Null}" ItemContainerStyle="{DynamicResource ListBoxItemStyle1}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"/>
+    </Grid>
+</UserControl>

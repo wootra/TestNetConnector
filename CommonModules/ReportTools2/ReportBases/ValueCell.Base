@@ -1,0 +1,27 @@
+﻿                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ValueRow[:BoxName:]">
+                      <Style>
+                        <TextAlign>[:TextAlign:]</TextAlign>
+                        <Color>[:FontColor:]</Color>
+                        <BackgroundColor>[:BackColor:]</BackgroundColor>
+                        <BorderColor>
+                          <Default>DimGray</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Gulim</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>[:Value:]</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+				

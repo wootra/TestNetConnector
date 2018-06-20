@@ -1,0 +1,12 @@
+check_ifcc1
+check_ifcc2
+check_control_a
+check_control_b
+check_control_all
+check_control_no
+04.di(ch3)
+uart1_baudchange
+uart2_baudchange
+can1_baudrate
+can2_baudrate
+uart3_baudchange

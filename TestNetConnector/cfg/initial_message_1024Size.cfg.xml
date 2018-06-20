@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TestNetConnector>
+    <FileInfo>
+        <version>1.88[2011/12/09]</version>
+        <fileType>Cfg</fileType>
+    </FileInfo>
+    <ConnMode>0</ConnMode>
+    <NetPosition>0</NetPosition>
+    <Endian>0</Endian>
+    <Encoding>0</Encoding>
+    <MsgFormat>0</MsgFormat>
+    <DataTypeSize>4</DataTypeSize>
+    <ResponseMode>1</ResponseMode>
+    <MsgText>int port1=9108;
+int port2=9109;
+int rest[254]=0;</MsgText>
+    <Msg>int,9108/int,9109/int,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</Msg>
+</TestNetConnector>

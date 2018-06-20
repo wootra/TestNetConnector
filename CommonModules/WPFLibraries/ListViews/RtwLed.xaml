@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="RtwWpfControls.RtwLed"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             x:Name="RtwLed1"
+             >
+    
+        <Grid d:DesignHeight="20" d:DesignWidth="20" x:Name="Led" Visibility="{Binding U_LedVisibility,ElementName=RtwLed1}"  HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch">
+            <Ellipse Stroke="{x:Null}"  Visibility="{Binding U_LedVisibility,ElementName=RtwLed1}">
+                <Ellipse.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FF606060" Offset="1"/>
+                        <GradientStop Color="#FFCECECE" Offset="0.086"/>
+                        <GradientStop Color="#FF6C6969" Offset="0.94"/>
+                        <GradientStop Color="#FF848484" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse x:Name="LedOff" Stroke="{x:Null}" Margin="3.095,3.537,3.095,2.653" Visibility="{Binding U_Off, ElementName=RtwLed1}">
+                <Ellipse.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FFAFAFAF" Offset="1"/>
+                        <GradientStop Color="#FFC6C6C6" Offset="0.086"/>
+                        <GradientStop Color="#FFB4B4B4" Offset="0.94"/>
+                        <GradientStop Color="#FF646464" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse x:Name="LedGreen" Stroke="{x:Null}" Margin="3.095,3.537,3.095,2.653" Visibility="{Binding U_GreenOn, ElementName=RtwLed1}">
+                <Ellipse.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FFCEEFC3" Offset="1"/>
+                        <GradientStop Color="#FF77C874" Offset="0.086"/>
+                        <GradientStop Color="#FF50FF13" Offset="0.94"/>
+                        <GradientStop Color="#FF0DD207" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse x:Name="LedRed" Stroke="{x:Null}" Margin="3.095,3.537,3.095,2.653" Visibility="{Binding U_RedOn, ElementName=RtwLed1}">
+                <Ellipse.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#FFEFA8A1" Offset="1"/>
+                        <GradientStop Color="#FFC87874" Offset="0.086"/>
+                        <GradientStop Color="#FFFF5F13" Offset="0.94"/>
+                        <GradientStop Color="#FFD20707" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Grid>
+    
+</UserControl>

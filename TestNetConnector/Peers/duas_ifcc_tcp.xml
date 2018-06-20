@@ -1,0 +1,8 @@
+<Peer>
+  <Envs>
+    <Env Name="GroupName">PacketList</Env>
+    <Env Name="Port">60000</Env>
+    <Env Name="ResponseMode">EchoNext</Env>
+    <Env Name="IP">127.0.0.1</Env>
+  </Envs>
+</Peer>

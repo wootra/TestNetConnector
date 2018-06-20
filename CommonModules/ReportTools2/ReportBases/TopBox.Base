@@ -1,0 +1,18 @@
+          <Textbox Name="TopBox_[:Name:]">
+            <Top>[:TopCm:]cm</Top>
+            <Style>
+              <Color>#1c3a70</Color>
+              <FontFamily>gulim</FontFamily>
+              <FontSize>[:Font:]pt</FontSize>
+              <TextAlign>Center</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>1</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Height>1cm</Height>
+            <Width>[:TotalWidth:]cm</Width>
+            <Value>[:Value:]</Value>
+          </Textbox>

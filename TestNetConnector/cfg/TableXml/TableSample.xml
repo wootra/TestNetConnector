@@ -1,0 +1,310 @@
+<Table>
+	<TableInfo>
+		<BaseRowHeight>25</BaseRowHeight>
+	</TableInfo>
+	<Columns>
+		<Column width="10" Name="col1" ItemType="CheckBox">
+			<CheckBoxProperties TriState="False" InitValue="0"/>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column width="10" Name="col2" ItemType="ImageCheckBox">
+			<ImageCheckBoxProperties HeaderText="ttt" TriState="False" InitValue="0">
+				<CheckImageList>
+					<NormalImage Name="offImage" URL="off.jpg"/>
+					<CheckImage Name="onImage" URL="on.jpg"/>
+					<InterImage Name="midImage" URL="mid.jpg"/>
+					<DisabledImage Name="disabledImage" URL="disabled.jpg"/>
+				</CheckImageList>
+			</ImageCheckBoxProperties>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column width="10" Name="col3" ItemType="ImageCheckBox">
+			<ImageCheckBoxProperties HeaderText="ttt" TriState="False" InitValue="0" CheckColor="Red">
+			</ImageCheckBoxProperties>
+		</Column>
+		<Column width="10" Name="col4" ItemType="ImageCheckBox">
+			<ImageCheckBoxProperties HeaderText="ttt" TriState="False" InitValue="0" CheckColor="Blue">
+			</ImageCheckBoxProperties>
+		</Column>
+		<Column width="10" Name="col5" ItemType="ImageCheckBox">
+			<ImageCheckBoxProperties HeaderText="ttt" TriState="False" InitValue="0" CheckColor="Green">
+			</ImageCheckBoxProperties>
+		</Column>
+		<Column width="10" Name="col6" ItemType="ComboBox">
+			<ComboBoxProperties HeaderText="ttt" SelectedIndex="0">
+				<SingleSelItems>
+					<SingleSelItem Selected="True">亲格1</SingleSelItem>
+					<SingleSelItem Selected="False">亲格2</SingleSelItem>
+					<SingleSelItem Selected="False">亲格3</SingleSelItem>
+				</SingleSelItems>
+			</ComboBoxProperties>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column width="10" Name="col7" ItemType="RadioButton">
+			<RadioButtonProperties HeaderText="ttt" SelectedIndex="0">
+				<SingleSelItems>
+					<SingleSelItem Selected="True">亲格1</SingleSelItem>
+					<SingleSelItem Selected="False">亲格2</SingleSelItem>
+					<SingleSelItem Selected="False">亲格3</SingleSelItem>
+				</SingleSelItems>
+			</RadioButtonProperties>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column width="10" Name="col8" ItemType="CheckBoxGroup">
+			<CheckBoxProperties HeaderText="ttt">
+				<MultiSelItems>
+					<MultiSelItem Checked="True">亲格1</MultiSelItem>
+					<MultiSelItem Checked="True">亲格2</MultiSelItem>
+					<MultiSelItem Checked="False">亲格3</MultiSelItem>
+				</MultiSelItems>
+			</CheckBoxProperties>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column width="10" Name="col2" ItemType="Image">
+			<ImageProperties HeaderText="ttt" InitValue="0" TitleShowImage="-1">
+				<ImageList>
+					<Image URL="a.jpg"/>
+					<Image URL="b.jpg"/>
+					<Image URL="c.jpg"/>
+				</ImageList>
+			</ImageProperties>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column width="10" Name="col2" ItemType="ImageButton">
+			<ImageProperties HeaderText="ttt" ShowTitleText="True" UseColumnTextForButtonValue="False" TitleShowImage="-1">
+				<ImageList>
+					<Image URL="a.jpg"/>
+					<Image URL="b.jpg"/>
+					<Image URL="c.jpg"/>
+				</ImageList>
+			</ImageProperties>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column width="10" Name="col2" ItemType="ImageButton">
+			<ImageButtonProperties HeaderText="ttt" ShowTitleText="True" UseColumnTextForButtonValue="False" TitleShowImage="-1"/>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column width="10" Name="col2" ItemType="Button">
+			<ButtonProperties HeaderText="ttt" BaseText="BtnTest"/>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column width="10" Name="col2" ItemType="CloseButton">
+			<CloseButtonProperties HeaderText="ttt" BaseText="BtnTest"/>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column width="10" ItemType="TextBox">
+			<TextBoxProperties HeaderText="ttt" Editable="true" IsAutoSort="False" InitValue="Test" TextAlignMode="None" />
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column width="10" Name="col2" ItemType="KeyValue">
+			<KeyValueProperties HeaderText="ttt"/>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+		<Column width="10" Name="col2" ItemType="FileOpenBox">
+			<FileOpenBoxProperties HeaderText="ttt" InitDirectory=""/>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>		
+		<Column width="10" Name="col2" ItemType="Various">
+			<VariousProperties HeaderText="ttt"/>
+			<Actions>
+				<OnClick>CommonAction</OnClick>
+				<OnDoubleClick>Auto</OnDoubleClick>
+				<OnRightClick>Auto</OnRightClick>
+			</Actions>
+		</Column>
+	</Columns>
+	<Rows>
+		<Row>
+			<RowInfo>
+				<Height>21</Height>
+				<RelativeObjects>
+					<Object Name="Test" Value="abc"/>
+					<Object Name="Test" Value="abc"/>
+				</RelativeObjects>
+			</RowInfo>
+			<Cells>
+				<Cell>0</Cell><!--CheckBox-->
+				<Cell>0</Cell><!--ImageCheckBox-->
+				<Cell>0</Cell><!--ImageCheckBox-->
+				<Cell>0</Cell><!--ImageCheckBox-->
+				<Cell>0</Cell><!--ImageCheckBox-->
+				<Cell>0</Cell><!--ComboBox-->
+				<Cell>0</Cell><!--RadioButton-->
+				<Cell>1 1 0</Cell><!--CheckBoxGroup-->
+				<Cell>0</Cell><!--Image-->
+				<Cell><!--ImageButton-->
+					<ItemInfo>
+						<ImageList>
+							<Image URL="a.jpg"/>
+							<Image URL="b.jpg"/>
+							<Image URL="c.jpg"/>
+						</ImageList>
+						<SelectedIndex Value="0"/>
+						<Text Value="btn"/>
+						<ImageLayout Value="None">
+					</ItemInfo>
+				</Cell>
+				<Cell>0</Cell><!--ImageButton-->
+				<Cell>Send</Cell><!--Button-->
+				<Cell>Close</Cell><!--CloseButton-->
+				<Cell>TextBox</Cell><!--TextBox-->
+				<Cell><!--KeyValue-->
+					<ItemInfo>
+						<KeyValueCollection>
+							<Item Key="test1" Value="tt" Color="Red"/>
+							<Item Key="test2" />
+							<Item Key="test3" Color="Black"/>
+						</KeyValueCollection>
+					</ItemInfo>
+				</Cell>
+				<Cell/><!--FileOpenBox-->
+				<Cell><!--Various-->
+					<ItemInfo ItemType="TextBox">
+						<Text Value="test"/>
+					</ItemInfo>
+				</Cell>
+			</Cells>
+		</Row>
+		<Row>
+			<RowInfo/>
+			<Cells>
+				<Cell>0</Cell><!--CheckBox-->
+				<Cell>0</Cell><!--ImageCheckBox-->
+				<Cell>0</Cell><!--ImageCheckBox-->
+				<Cell>0</Cell><!--ImageCheckBox-->
+				<Cell>0</Cell><!--ImageCheckBox-->
+				<Cell>0</Cell><!--ComboBox-->
+				<Cell>0</Cell><!--RadioButton-->
+				<Cell>1 1 0</Cell><!--CheckBoxGroup-->
+				<Cell>0</Cell><!--Image-->
+				<Cell><!--ImageButton-->
+					<ItemInfo>
+						<ImageList>
+							<Image URL="a.jpg"/>
+							<Image URL="b.jpg"/>
+							<Image URL="c.jpg"/>
+						</ImageList>
+						<SelectedIndex Value="0"/>
+						<Text Value="btn"/>
+						<ImageLayout Value="None">
+					</ItemInfo>
+				</Cell>
+				<Cell>0</Cell><!--ImageButton-->
+				<Cell>Send</Cell><!--Button-->
+				<Cell>Close</Cell><!--CloseButton-->
+				<Cell>TextBox</Cell><!--TextBox-->
+				<Cell><!--KeyValue-->
+					<ItemInfo>
+						<KeyValueCollection>
+							<Item Key="test1" Value="tt" Color="Red"/>
+							<Item Key="test2" />
+							<Item Key="test3" Color="Black"/>
+						</KeyValueCollection>
+					</ItemInfo>
+				</Cell>
+				<Cell/><!--FileOpenBox-->
+				<Cell><!--Various-->
+					<ItemInfo ItemType="TextBox">
+						<Text Value="test"/>
+					</ItemInfo>
+				</Cell>
+			</Cells>
+		</Row>	
+		<Row>
+			<Cells>
+				<Cell>0</Cell><!--CheckBox-->
+				<Cell>0</Cell><!--ImageCheckBox-->
+				<Cell>0</Cell><!--ImageCheckBox-->
+				<Cell>0</Cell><!--ImageCheckBox-->
+				<Cell>0</Cell><!--ImageCheckBox-->
+				<Cell>0</Cell><!--ComboBox-->
+				<Cell>0</Cell><!--RadioButton-->
+				<Cell>1 1 0</Cell><!--CheckBoxGroup-->
+				<Cell>0</Cell><!--Image-->
+				<Cell><!--ImageButton-->
+					<ItemInfo>
+						<ImageList>
+							<Image URL="a.jpg"/>
+							<Image URL="b.jpg"/>
+							<Image URL="c.jpg"/>
+						</ImageList>
+						<SelectedIndex Value="0"/>
+						<Text Value="btn"/>
+						<ImageLayout Value="None">
+					</ItemInfo>
+				</Cell>
+				<Cell>0</Cell><!--ImageButton-->
+				<Cell>Send</Cell><!--Button-->
+				<Cell>Close</Cell><!--CloseButton-->
+				<Cell>TextBox</Cell><!--TextBox-->
+				<Cell><!--KeyValue-->
+					<ItemInfo>
+						<KeyValueCollection>
+							<Item Key="test1" Value="tt" Color="Red"/>
+							<Item Key="test2" />
+							<Item Key="test3" Color="Black"/>
+						</KeyValueCollection>
+					</ItemInfo>
+				</Cell>
+				<Cell/><!--FileOpenBox-->
+				<Cell><!--Various-->
+					<ItemInfo ItemType="TextBox">
+						<Text Value="test"/>
+					</ItemInfo>
+				</Cell>
+			</Cells>
+		</Row>			
+	</Rows>
+</Table>

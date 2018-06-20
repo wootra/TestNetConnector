@@ -1,0 +1,11 @@
+short in_command=0x0001;
+short in_tag = 4;
+int timeTag[4]={0,0,0,0};
+int size=0;
+byte command=0x04;
+byte ch=0x01;
+short cpu_board_id=0;
+int sn=1;
+short size=1;
+byte data=1;
+short chsum=-8;

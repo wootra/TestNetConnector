@@ -1,0 +1,261 @@
+    <Chart Name="[:ChartName:]">
+      <ChartCategoryHierarchy>
+        <ChartMembers>
+          <ChartMember>
+            <Group Name="[:ChartName:]_CategoryGroup">
+              <GroupExpressions>
+                <GroupExpression>=Fields!Name.Value</GroupExpression>
+              </GroupExpressions>
+            </Group>
+            <SortExpressions>
+              <SortExpression>
+                <Value>=Fields![:LabelFieldName:].Value</Value>
+              </SortExpression>
+            </SortExpressions>
+            <Label>=Fields![:LabelFieldName:].Value</Label>
+          </ChartMember>
+        </ChartMembers>
+      </ChartCategoryHierarchy>
+      <ChartSeriesHierarchy>
+        <ChartMembers>
+          <ChartMember>
+            <Label>[:ValueFieldName:]</Label>
+          </ChartMember>
+        </ChartMembers>
+      </ChartSeriesHierarchy>
+      <ChartData>
+        <ChartSeriesCollection>
+          <ChartSeries Name="[:ValueFieldName:]">
+            <ChartDataPoints>
+              <ChartDataPoint>
+                <ChartDataPointValues>
+                  <Y>=Count(Fields![:ValueFieldName:].Value)</Y>
+                </ChartDataPointValues>
+                <ChartDataLabel>
+                  <Style />
+                </ChartDataLabel>
+                <Style />
+                <ChartMarker>
+                  <Style />
+                </ChartMarker>
+                <DataElementOutput>Output</DataElementOutput>
+              </ChartDataPoint>
+            </ChartDataPoints>
+            <Type>Shape</Type>
+            <Subtype>ExplodedPie</Subtype>
+            <Style />
+            <ChartEmptyPoints>
+              <Style />
+              <ChartMarker>
+                <Style />
+              </ChartMarker>
+              <ChartDataLabel>
+                <Style />
+              </ChartDataLabel>
+            </ChartEmptyPoints>
+            <ValueAxisName>Primary</ValueAxisName>
+            <CategoryAxisName>Primary</CategoryAxisName>
+            <ChartSmartLabel>
+              <CalloutLineColor>Black</CalloutLineColor>
+              <MinMovingDistance>0pt</MinMovingDistance>
+            </ChartSmartLabel>
+          </ChartSeries>
+        </ChartSeriesCollection>
+      </ChartData>
+      <ChartAreas>
+        <ChartArea Name="Default">
+          <ChartCategoryAxes>
+            <ChartAxis Name="Primary">
+              <Visible>False</Visible>
+              <Style>
+                <FontSize>8pt</FontSize>
+              </Style>
+              <ChartAxisTitle>
+                <Caption>Axis Title</Caption>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </ChartAxisTitle>
+              <Margin>False</Margin>
+              <ChartMajorGridLines>
+                <Enabled>False</Enabled>
+                <Style>
+                  <Border>
+                    <Color>Gainsboro</Color>
+                  </Border>
+                </Style>
+              </ChartMajorGridLines>
+              <ChartMinorGridLines>
+                <Style>
+                  <Border>
+                    <Color>Gainsboro</Color>
+                    <Style>Dotted</Style>
+                  </Border>
+                </Style>
+              </ChartMinorGridLines>
+              <ChartMinorTickMarks>
+                <Length>0.5</Length>
+              </ChartMinorTickMarks>
+              <CrossAt>NaN</CrossAt>
+              <Minimum>NaN</Minimum>
+              <Maximum>NaN</Maximum>
+              <ChartAxisScaleBreak>
+                <Style />
+              </ChartAxisScaleBreak>
+            </ChartAxis>
+            <ChartAxis Name="Secondary">
+              <Visible>False</Visible>
+              <Style>
+                <FontSize>8pt</FontSize>
+              </Style>
+              <ChartAxisTitle>
+                <Caption>Axis Title</Caption>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </ChartAxisTitle>
+              <Margin>False</Margin>
+              <ChartMajorGridLines>
+                <Enabled>False</Enabled>
+                <Style>
+                  <Border>
+                    <Color>Gainsboro</Color>
+                  </Border>
+                </Style>
+              </ChartMajorGridLines>
+              <ChartMinorGridLines>
+                <Style>
+                  <Border>
+                    <Color>Gainsboro</Color>
+                    <Style>Dotted</Style>
+                  </Border>
+                </Style>
+              </ChartMinorGridLines>
+              <ChartMinorTickMarks>
+                <Length>0.5</Length>
+              </ChartMinorTickMarks>
+              <CrossAt>NaN</CrossAt>
+              <Location>Opposite</Location>
+              <Minimum>NaN</Minimum>
+              <Maximum>NaN</Maximum>
+              <ChartAxisScaleBreak>
+                <Style />
+              </ChartAxisScaleBreak>
+            </ChartAxis>
+          </ChartCategoryAxes>
+          <ChartValueAxes>
+            <ChartAxis Name="Primary">
+              <Visible>False</Visible>
+              <Style>
+                <FontSize>8pt</FontSize>
+              </Style>
+              <ChartAxisTitle>
+                <Caption>Axis Title</Caption>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </ChartAxisTitle>
+              <ChartMajorGridLines>
+                <Style>
+                  <Border>
+                    <Color>Gainsboro</Color>
+                  </Border>
+                </Style>
+              </ChartMajorGridLines>
+              <ChartMinorGridLines>
+                <Style>
+                  <Border>
+                    <Color>Gainsboro</Color>
+                    <Style>Dotted</Style>
+                  </Border>
+                </Style>
+              </ChartMinorGridLines>
+              <ChartMinorTickMarks>
+                <Length>0.5</Length>
+              </ChartMinorTickMarks>
+              <CrossAt>NaN</CrossAt>
+              <Minimum>NaN</Minimum>
+              <Maximum>NaN</Maximum>
+              <ChartAxisScaleBreak>
+                <Style />
+              </ChartAxisScaleBreak>
+            </ChartAxis>
+            <ChartAxis Name="Secondary">
+              <Visible>False</Visible>
+              <Style>
+                <FontSize>8pt</FontSize>
+              </Style>
+              <ChartAxisTitle>
+                <Caption>Axis Title</Caption>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </ChartAxisTitle>
+              <ChartMajorGridLines>
+                <Style>
+                  <Border>
+                    <Color>Gainsboro</Color>
+                  </Border>
+                </Style>
+              </ChartMajorGridLines>
+              <ChartMinorGridLines>
+                <Style>
+                  <Border>
+                    <Color>Gainsboro</Color>
+                    <Style>Dotted</Style>
+                  </Border>
+                </Style>
+              </ChartMinorGridLines>
+              <ChartMinorTickMarks>
+                <Length>0.5</Length>
+              </ChartMinorTickMarks>
+              <CrossAt>NaN</CrossAt>
+              <Location>Opposite</Location>
+              <Minimum>NaN</Minimum>
+              <Maximum>NaN</Maximum>
+              <ChartAxisScaleBreak>
+                <Style />
+              </ChartAxisScaleBreak>
+            </ChartAxis>
+          </ChartValueAxes>
+          <ChartThreeDProperties>
+            <Enabled>true</Enabled>
+          </ChartThreeDProperties>
+          <Style>
+            <BackgroundColor>#00ffffff</BackgroundColor>
+            <BackgroundGradientType>None</BackgroundGradientType>
+          </Style>
+        </ChartArea>
+      </ChartAreas>
+      <Palette>BrightPastel</Palette>
+      <ChartBorderSkin>
+        <Style>
+          <BackgroundColor>Gray</BackgroundColor>
+          <BackgroundGradientType>None</BackgroundGradientType>
+          <Color>White</Color>
+        </Style>
+      </ChartBorderSkin>
+      <ChartNoDataMessage Name="NoDataMessage">
+        <Caption>No Data Available</Caption>
+        <Style>
+          <BackgroundGradientType>None</BackgroundGradientType>
+          <TextAlign>General</TextAlign>
+          <VerticalAlign>Top</VerticalAlign>
+        </Style>
+      </ChartNoDataMessage>
+      <rd:DesignerMode>Sparkline</rd:DesignerMode>
+      <DataSetName>[:DataSetName:]</DataSetName>
+      <Top>[:Top:]cm</Top>
+      <Left>[:Left:]cm</Left>
+      <Height>[:Height:]cm</Height>
+      <Width>[:Width:]cm</Width>
+      <ZIndex>10</ZIndex>
+      <Style>
+        <Border>
+          <Color>LightGrey</Color>
+          <Style>Solid</Style>
+        </Border>
+        <BackgroundColor>White</BackgroundColor>
+        <BackgroundGradientType>None</BackgroundGradientType>
+      </Style>
+    </Chart>

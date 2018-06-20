@@ -1,0 +1,38 @@
+<Packet>
+  <Infos Comment="" LastModified="2013-01-24 오후 6:55:55">
+    <Info />
+    <Info />
+  </Infos>
+  <Items>
+    <Item Name="tag        " Type="int" IsSwap="False" Visible="True" Size="1">
+      <InitValue>0xBEAD</InitValue>
+    </Item>
+    <Item Name="dataSize        " Type="int" IsSwap="False" Visible="True" Size="1">
+      <InitValue>8</InitValue>
+    </Item>
+    <Item Name="id        " Type="int" IsSwap="False" Visible="True" Size="1">
+      <InitValue>103</InitValue>
+    </Item>
+    <Item Name="time1        " Type="int" IsSwap="False" Visible="True" Size="1">
+      <InitValue>1</InitValue>
+    </Item>
+    <Item Name="time2        " Type="int" IsSwap="False" Visible="True" Size="1">
+      <InitValue>2</InitValue>
+    </Item>
+    <Item Name="time3        " Type="int" IsSwap="False" Visible="True" Size="1">
+      <InitValue>3</InitValue>
+    </Item>
+    <Item Name="time4        " Type="int" IsSwap="False" Visible="True" Size="1">
+      <InitValue>4</InitValue>
+    </Item>
+    <Item Name="status        " Type="int" IsSwap="False" Visible="True" Size="1">
+      <InitValue>1</InitValue>
+    </Item>
+    <Item Name="data1 " Type="int" IsSwap="False" Visible="True" Size="1">
+      <InitValue>0x01020305</InitValue>
+    </Item>
+    <Item Name="data2 " Type="int" IsSwap="False" Visible="True" Size="1">
+      <InitValue>0x05060708</InitValue>
+    </Item>
+  </Items>
+</Packet>

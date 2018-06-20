@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="XmlEditorComs.XmlEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit">
+    <Grid>
+        <avalonedit:TextEditor Name="Editor" SyntaxHighlighting="XML" FontFamily="Consolas" FontSize="10pt" Margin="0,20,0,23" />
+        <Button Content="123" Height="20" HorizontalAlignment="Right" Margin="0,0,0,0" Name="B_Num" VerticalAlignment="Top" Width="20" FontSize="8" />
+        <Button Content="¶" Height="20" HorizontalAlignment="Right" Margin="0,0,25,0" Name="B_WordWrap" VerticalAlignment="Top" Width="20" FontSize="8" />
+        <Button Content="V" Height="20" HorizontalAlignment="Right" Margin="0,0,50,0" Name="B_Down" VerticalAlignment="Top" Width="20" FontSize="8" />
+        <Button Content="A" Height="20" HorizontalAlignment="Right" Margin="0,0,75,0" Name="B_Up" VerticalAlignment="Top" Width="20" FontSize="8" />
+        <StatusBar Height="23" Margin="0,0,0,0" Name="_statusBar" VerticalAlignment="Bottom">
+            <StatusBarItem Name="_textStatus" Content="test" HorizontalAlignment="Left" Margin="0,0,0,0"/>
+            <StatusBarItem Name="_caretPosition" Content="(0,0)" HorizontalAlignment="Right" Margin="0,0,0,0"/>
+        </StatusBar>
+        
+    </Grid>
+</UserControl>

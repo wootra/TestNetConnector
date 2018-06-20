@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="EvalCSCode">
+</Property><Property Name="솔루션 파일" Value="D:\CS_Projects\CommonModules\EvalCSCode\EvalCSCode.sln">
+</Property><Property Name="Date" Value="2013년 2월 25일 월요일">
+</Property><Property Name="Time" Value="오후 12:19:20">
+</Property><Property Name="로그 번호" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="Expr" Source="Expr\Expr.csproj" Description="프로젝트 파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\Expr.csproj(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\BinaryOp.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\BinaryOp.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\BinaryOps.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\BinaryOps.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\ConditionalOp.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\ConditionalOp.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\Constant.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\Constant.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\BinaryHelper.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\BinaryHelper.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\ConvertHelper.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\ConvertHelper.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\ErrorFormator.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\ErrorFormator.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\EvalException.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\EvalException.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\Evaluator.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\Evaluator.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\IExecutor.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\IExecutor.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\OperatorPriority.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\OperatorPriority.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\Parameter.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\Parameter.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\ParameterVariableHolder.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\ParameterVariableHolder.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\MemberId.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\MemberId.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\Error.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\Error.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\Expression.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\Expression.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\ParserException.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\ParserException.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\ScannerException.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\ScannerException.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\Parser.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\Parser.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\Scanner.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\Scanner.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\Operand.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\Operand.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\Operator.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\Operator.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\SR.Designer.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\SR.Designer.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\StringToken.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\StringToken.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\Token.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\Token.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\Tree.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\Tree.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\Identifier.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\Identifier.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\IndexerOp.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\IndexerOp.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\MemberOp.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\MemberOp.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\Properties\AssemblyInfo.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\Properties\AssemblyInfo.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\Context.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\Context.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\UnaryOp.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\UnaryOp.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\Variable.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\Variable.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\Executor.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\Executor.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\ExecutorContext.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\ExecutorContext.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\Executors.cs" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\Executors.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\SR.resx" Description="파일을 D:\CS_Projects\CommonModules\EvalCSCode\Backup1\SR.resx(으)로 백업했습니다.">
+</Event><Event ErrorLevel="1" Project="Expr" Source="Expr\Expr.csproj" Description="프로젝트가 .NET Framework 2.0 또는 3.0을 대상으로 합니다. 프로젝트에서 최신 .NET Framework를 필요로 하는 어셈블리를 사용하는 경우 프로젝트를 빌드할 수 없습니다. 프로젝트 메뉴에서 [속성]을 클릭하고 '.NET Framework' 드롭다운 상자에서 새 버전을 선택하면 .NET Framework 버전을 변경할 수 있습니다. Visual Basic의 경우 이 옵션이 '고급 컴파일러 옵션...' 단추를 클릭하면 나타나는 [컴파일] 탭에 있습니다.">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\Expr.csproj" Description="프로젝트를 변환했습니다.">
+</Event><Event ErrorLevel="3" Project="Expr" Source="Expr\Expr.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Expr" Source="Expr\Expr.csproj" Description="검사 완료: 프로젝트 파일을 업그레이드할 필요가 없습니다.">
+</Event></UpgradeLog>

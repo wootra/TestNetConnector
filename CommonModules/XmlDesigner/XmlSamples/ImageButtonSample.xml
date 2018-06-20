@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<ImageButton xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://s2gg.org/schemas/RuleSchemas ../ComponentSchemas/ImageButtonSchema.xsd"
+ xmlns="http://s2gg.org/schemas/RuleSchemas"
+ Enabled="true"
+ TextColor="Black"
+ BackColor="Transparent"
+ Text="Test"
+ ActivationColor="AliceBlue">
+  <Images>
+    <Image URL="a.jpg"/>
+    <Image URL="b.jpg"/>
+  </Images>
+  <Events>
+    <OnClick>
+      <Actions>
+        <Condition>
+          <True/>
+        </Condition>
+        <Action Name="Test"></Action>
+      </Actions>
+    </OnClick>
+  </Events>
+</ImageButton>

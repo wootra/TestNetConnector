@@ -1,0 +1,4 @@
+short cmd=0x0201;
+short tag = 0;
+int timeTag[4]={0,0,0,0};
+int len=0;

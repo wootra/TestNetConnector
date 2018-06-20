@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<?xml-model href="../ComponentSchemas/LayoutCollectionSchema.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<LayoutCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://s2gg.org/schemas/RuleSchemas ../ComponentSchemas/LayoutCollectionSchema.xsd"
+ xmlns="http://s2gg.org/schemas/RuleSchemas">
+  <Layout Dock="Top" Height="92">
+    <Flow>
+      <Component Width="130" Height="50" Name="TextBox1" Ref="TextBoxSample.xml"/>
+      <Component Width="100" Height="50" Name="TextBox2">
+        <TextBox Text="Test" TextAlign="Right"/>
+      </Component>
+    </Flow>
+  </Layout>
+  <Layout Dock="Bottom" Height="300" NameSpace="tableTest" >
+    <Panel>
+
+      <Component Width="200" Height="300" X="0" Y="0" Name="Table1" Ref="ScenarioTableSample.xml"/>
+      <Component Width="400" Height="300" X="250" Y="0" Name="Layout1">
+        <Layout Dock="None">
+          <Flow>
+            <Component Width="200" Height="30" Name="Label1" Ref="LabelSample.xml"/>
+            <Component Width="200" Height="30" Name="Button1" Ref="ButtonSample.xml"/>
+            <Component Width="200" Height="30" Name="Button2" Ref="ButtonSample.xml"/>
+            <Component Width="200" Height="30" Name="Button3" Ref="ButtonSample.xml"/>
+          </Flow>
+        </Layout>
+      </Component>
+      <Component Width="200" Height="30" X="650" Y="50" Name="Label3" Ref="LabelSample.xml"/>
+    </Panel>
+  </Layout>
+
+
+</LayoutCollection>

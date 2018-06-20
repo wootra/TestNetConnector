@@ -1,0 +1,3 @@
+short in_command=0x0001;
+short in_tag = 1;
+int size=0;

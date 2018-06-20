@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="WPFComponentsControls.XmlExpander"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="144" d:DesignWidth="284">
+    <Grid>
+        <Rectangle Fill="Beige" Name="BackRect" Margin="20,0,0,0"/>
+        <Expander Header="&lt;test&gt;" Name="Expander">
+            <Grid>
+                <StackPanel HorizontalAlignment="Stretch" Margin="20,0,0,23" Name="InnerCode" VerticalAlignment="Stretch"></StackPanel>
+                <Label HorizontalAlignment="Stretch" Margin="20,0,0,0" Name="CloseTag" VerticalAlignment="Bottom" Height="23" Content="&lt;/test&gt;"/>
+                
+            </Grid>
+        </Expander>
+        <TextBox Height="23" HorizontalAlignment="Stretch" Name="textBox1" VerticalAlignment="Top" BorderBrush="Transparent" Margin="20,0,53,0" Background="#ddffffff"/>
+        <Button Content="X" Height="23" HorizontalAlignment="Right" Margin="0,0,30,0" Name="CloseButton" VerticalAlignment="Top" Width="26" />
+        <Button Content="ALL" Height="23" HorizontalAlignment="Right" Margin="0,0,0,0" Name="CloseAllButton" VerticalAlignment="Top" Width="26" />
+    </Grid>
+</UserControl>

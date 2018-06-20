@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FieldMatchSchema"
+    targetNamespace="http://s2gg.org/schemas/FieldMatchSchema"
+    elementFormDefault="qualified"
+    xmlns="http://s2gg.org/schemas/FieldMatchSchema"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:rules="http://s2gg.org/schemas/RuleSchemas"
+    xmlns:colors="http://s2gg.org/schemas/TypeSchemas/Color"
+>
+  <xs:import namespace="http://s2gg.org/schemas/RuleSchemas" schemaLocation="file://D:/CS_Projects/CommonModules/XmlDesigner/ComponentSchemas/Rules/SimpleComsRuleSchema.xsd"/>
+  <xs:import namespace="http://s2gg.org/schemas/RuleSchemas" schemaLocation="file://D:/CS_Projects/CommonModules/XmlDesigner/ComponentSchemas/Rules/LayoutRuleSchema.xsd"/>
+  <xs:import namespace="http://s2gg.org/schemas/RuleSchemas" schemaLocation="file://D:/CS_Projects/CommonModules/XmlDesigner/ComponentSchemas/Rules/TableRuleSchema.xsd"/>
+  <xs:import namespace="http://s2gg.org/schemas/RuleSchemas" schemaLocation="file://D:/CS_Projects/CommonModules/XmlDesigner/ComponentSchemas/Rules/GlobalTypesRuleSchema.xsd"/>
+  <xs:import namespace="http://s2gg.org/schemas/TypeSchemas/Color" schemaLocation="file://D:/CS_Projects/CommonModules/XmlDesigner/ComponentSchemas/Rules/ColorRuleSchema.xsd"/>
+  
+  <xs:element name="ControlMatchings">
+    <xs:complexType mixed="true">
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CommonMatches" type="CommonMatchItemType" minOccurs="0" maxOccurs="1"/>
+        <xs:sequence>
+          <xs:element name="MatchItem" type="MatchItemType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="CommandMatchType">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="MatchItem" type="MatchItemType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>    
+  </xs:complexType>
+  
+  <xs:complexType name="InitMatchType">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="MatchItem" type="MatchItemType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="CommonMatchItemType">
+    <xs:sequence minOccurs="1" maxOccurs="unbounded">
+      <xs:element name="Match" type="MatchType"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="MatchItemType">
+    <xs:sequence minOccurs="1" maxOccurs="unbounded">
+      <xs:element name="Match" type="MatchType"/>
+    </xs:sequence>
+    <xs:attribute name="TargetTemplate" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="MatchType">
+    <xs:sequence>
+      <xs:element name="Condition" type="ConditionType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Component" type="ComponentType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="FieldName" type="FieldNameType" use="required"/>
+    <xs:attribute name="ActiveTimes" type="ActiveTimeListType" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="ConditionType">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="True"/>
+        <xs:element name="False"/>
+        <xs:element name="And" type="ConditionType"/>
+        <xs:element name="Or" type="ConditionType"/>
+        <xs:element name="Equal" type="EqualType"/>
+        <xs:element name="More" type="CompareType"/>
+        <xs:element name="MoreOrEqual" type="CompareType"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CompareType">
+    <xs:sequence minOccurs="2" maxOccurs="unbounded">
+      <xs:element name="Value">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="Type" type="rules:BasicTypes" use="required"/>
+              <xs:attribute name="IsVariable" type="xs:boolean" use="optional"/>
+              <xs:attribute name="FieldName" type="xs:string" use="optional"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="EqualType">
+    <xs:sequence minOccurs="2" maxOccurs="unbounded">
+      <xs:element name="Value">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="Type" type="rules:BasicTypes" use="required"/>
+              <xs:attribute name="IsVariable" type="xs:boolean" use="optional"/>
+              <xs:attribute name="IsComponent" type="xs:boolean" use="optional"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:simpleType name="ActiveTimeListType">
+    <xs:list itemType="ActiveTimeType"/>
+  </xs:simpleType>
+  
+  <xs:simpleType name="ActiveTimeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Init"/>
+      <xs:enumeration value="Recv"/>
+      <xs:enumeration value="Send"/>
+      <xs:enumeration value="Changed"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="ComponentType">
+    <xs:sequence>
+      <xs:element name="Condition" type="rules:ConditionType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Format" type="FormatType" minOccurs="0" maxOccurs="1"/>
+      <xs:choice minOccurs="1" maxOccurs="unbounded">
+        <xs:element name="ScenarioTable" type="TableType"/>
+        <xs:element name="ScenarioPanel" type="ScenarioPanelType"/>
+        <xs:element name="LogTable" type="TableType"/>
+        <xs:element name="PropertyTable" type="PropertyTableType"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="SendingParser" type="SendingParserType"/>
+    <xs:attribute name="Args" type="ArgType"/>
+  </xs:complexType>
+
+  <xs:simpleType name="ArgType">
+    <xs:list itemType="xs:string"/>
+  </xs:simpleType>
+  
+  <xs:simpleType name="SendingParserType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ValueToDecimal"/>
+      
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="TableType">
+    <xs:complexContent mixed="true">
+      <xs:extension base="rules:PropertyBorderType">
+        <xs:attribute name="TargetName" type="xs:string" use="required"/>
+
+        <xs:attribute name="ColumnName" type="xs:string" use="required"/>
+        <xs:attribute name="ItemType" type="rules:ItemTypes" use="optional"/>
+        <xs:attribute name="InitValue" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="ScenarioPanelType">
+    <xs:complexContent mixed="true">
+      <xs:extension base="rules:PropertyBorderType">
+        <xs:attribute name="TargetName" type="xs:string" use="required"/>
+        <xs:attribute name="ElementName" type="xs:string" use="optional"/>
+        
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="PropertyTableType">
+    <xs:complexContent mixed="true">
+      <xs:extension base="rules:PropertyBorderType">
+        <xs:attribute name="TargetName" type="xs:string" use="required"/>
+        <xs:attribute name="Name" type="xs:string" use="required"/>
+        <xs:attribute name="ItemType" type="rules:ItemTypes" use="optional"/>
+        <xs:attribute name="Value" type="xs:string" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="FormatType">
+    <xs:sequence>
+      <xs:choice minOccurs="1" maxOccurs="unbounded">
+        <xs:element name="String" type="xs:string"/>
+        <xs:element name="FieldItem" type="FieldItemType"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Color" type="colors:ColorType"/>
+  </xs:complexType>
+
+  <xs:complexType name="FieldItemType">
+    <xs:attribute name="Parser" type="ParserType" use="optional"/>
+    <xs:attribute name="Args" type="ArgType" use="optional"/>
+  </xs:complexType>
+
+  <xs:simpleType name="ParserType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Led.FromRange"/>
+      <xs:enumeration value="Led.FromCorrectValue"/>
+      <xs:enumeration value="Text.ToString"/>
+      <xs:enumeration value="Text.PassFailByMinMax"/>
+      <xs:enumeration value="Text.PassFailByCorrectValue"/>
+      <xs:enumeration value="Text.TrueFalseByMinMax"/>
+      <xs:enumeration value="Text.TrueFalseByCorrectValue"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  
+  <xs:simpleType name="FieldNameType">
+    <xs:union memberTypes="FieldNameTypePattern StringFieldType"/>
+  </xs:simpleType>
+  
+  <xs:simpleType name="FieldNameTypePattern">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="Command.(([a-zA-Z_]+[a-zA-Z0-9_]?)+.)?([a-zA-Z_]+[a-zA-Z0-9_]?)+"/>
+      <xs:pattern value="Response.(([a-zA-Z_]+[a-zA-Z0-9_]?)+.)?([a-zA-Z_]+[a-zA-Z0-9_]?)+"/>
+      <xs:pattern value="Info.([a-zA-Z_]+[a-zA-Z0-9_]?)+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="StringFieldType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="String.*"/>
+      <xs:pattern value="Packet.Port"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+

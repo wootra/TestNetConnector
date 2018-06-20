@@ -1,0 +1,10 @@
+short in_command=0x0001;
+short in_tag = 0;
+int size=0;
+byte command=0x01;
+byte ch=0;
+short cpu_board_id=0;
+int sn=1;
+short size=14;
+byte data[14]={1,0,0,0,0,1,0,0,0,0,1,0,0,0};
+short chsum=1;

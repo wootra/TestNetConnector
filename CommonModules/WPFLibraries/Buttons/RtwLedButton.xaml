@@ -1,0 +1,187 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="Buttons.RtwLedButton"
+	x:Name="RtwLedButton1"
+	d:DesignWidth="640" d:DesignHeight="480">
+	<UserControl.Resources>
+		
+		<Storyboard x:Key="OnMouseEnter1">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="Back">
+				<SplineDoubleKeyFrame KeyTime="0:0:0.1" Value="0.082"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Offset)" Storyboard.TargetName="Back">
+				<SplineDoubleKeyFrame KeyTime="0:0:0.1" Value="0.94"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[4].(GradientStop.Color)" Storyboard.TargetName="Back">
+				<SplineColorKeyFrame KeyTime="0:0:0.1" Value="#0000587E"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="OnMouseDown">
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[4].(GradientStop.Color)" Storyboard.TargetName="Back">
+				<SplineColorKeyFrame KeyTime="0:0:0.1" Value="#FFB7FF00"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)" Storyboard.TargetName="Back">
+				<SplineColorKeyFrame KeyTime="0:0:0.1" Value="#FF2A3906"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Storyboard.TargetName="Back">
+				<SplineColorKeyFrame KeyTime="0:0:0.1" Value="#FF95C41C"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="Back">
+				<SplineColorKeyFrame KeyTime="0:0:0.1" Value="#FF435418"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="OnMouseUp">
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[4].(GradientStop.Color)" Storyboard.TargetName="Back">
+				<SplineColorKeyFrame KeyTime="0" Value="#FFB7FF00"/>
+				<SplineColorKeyFrame KeyTime="0:0:0.2" Value="#00878787"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)" Storyboard.TargetName="Back">
+				<SplineColorKeyFrame KeyTime="0" Value="#FF2A3906"/>
+				<SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF434343"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Storyboard.TargetName="Back">
+				<SplineColorKeyFrame KeyTime="0" Value="#FF95C41C"/>
+				<SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FFC4C4C4"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="Back">
+				<SplineColorKeyFrame KeyTime="0" Value="#FF435418"/>
+				<SplineColorKeyFrame KeyTime="0:0:0.2" Value="#FF5E5E5E"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="Back">
+				<SplineColorKeyFrame KeyTime="0" Value="White"/>
+				<SplineColorKeyFrame KeyTime="0:0:0.2" Value="White"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="OnMouseLeave">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="Back">
+				<SplineDoubleKeyFrame KeyTime="0:0:0.1" Value="0.086"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Offset)" Storyboard.TargetName="Back">
+				<SplineDoubleKeyFrame KeyTime="0:0:0.1" Value="0.94"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[4].(GradientStop.Color)" Storyboard.TargetName="Back">
+				<SplineColorKeyFrame KeyTime="0" Value="#0000587E"/>
+				<SplineColorKeyFrame KeyTime="0:0:0.1" Value="#00818181"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="Back">
+				<SplineColorKeyFrame KeyTime="0" Value="White"/>
+				<SplineColorKeyFrame KeyTime="0:0:0.1" Value="#FFFDFDFD"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Storyboard.TargetName="Back">
+				<SplineColorKeyFrame KeyTime="0" Value="#FFC4C4C4"/>
+				<SplineColorKeyFrame KeyTime="0:0:0.1" Value="#FFC4C3C3"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)" Storyboard.TargetName="Back">
+				<SplineColorKeyFrame KeyTime="0" Value="#FF414141"/>
+				<SplineColorKeyFrame KeyTime="0:0:0.1" Value="#FF414141"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="Back">
+				<SplineColorKeyFrame KeyTime="0" Value="#FF606060"/>
+				<SplineColorKeyFrame KeyTime="0:0:0.1" Value="#FF5E5E5E"/>
+			</ColorAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Rectangle.RadiusX)" Storyboard.TargetName="Shadow">
+				<SplineDoubleKeyFrame KeyTime="0" Value="5"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Rectangle.RadiusY)" Storyboard.TargetName="Shadow">
+				<SplineDoubleKeyFrame KeyTime="0" Value="5"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+	</UserControl.Resources>
+	<UserControl.Triggers>
+		<EventTrigger RoutedEvent="Mouse.MouseEnter">
+			<BeginStoryboard x:Name="OnMouseEnter1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter1}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown">
+			<BeginStoryboard x:Name="OnMouseLeave1_BeginStoryboard1" Storyboard="{StaticResource OnMouseDown}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonUp">
+			<BeginStoryboard x:Name="OnMouseUp_BeginStoryboard" Storyboard="{StaticResource OnMouseUp}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Mouse.MouseLeave">
+			<BeginStoryboard x:Name="OnMouseLeave_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave}"/>
+		</EventTrigger>
+	</UserControl.Triggers>
+	<Grid>
+		<Rectangle x:Name="Shadow" Margin="0" RadiusX="7" RadiusY="7" StrokeThickness="0">
+        	<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="#55123862" Offset="0"/>
+        			<GradientStop Color="#46EAF3FD" Offset="1"/>
+        		</LinearGradientBrush>
+        	</Rectangle.Fill>
+        </Rectangle>
+		<Rectangle x:Name="Back_Disabled" RadiusY="5" RadiusX="5" Stroke="{x:Null}" Visibility="{Binding BackDisabled, ElementName=RtwLedButton1}" Margin="2">
+			<Rectangle.Fill>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="White" Offset="0"/>
+					<GradientStop Color="#FF606060" Offset="1"/>
+					<GradientStop Color="#FFCECECE" Offset="0.086"/>
+					<GradientStop Color="#FF6C6969" Offset="0.94"/>
+					<GradientStop Color="#FF848484" Offset="0.5"/>
+				</LinearGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
+		<Rectangle x:Name="Back" RadiusY="5" RadiusX="5" Stroke="{x:Null}" Visibility="{Binding BackEnabled, ElementName=RtwLedButton1}" Margin="2">
+			<Rectangle.Fill>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="White" Offset="0"/>
+					<GradientStop Color="#FF606060" Offset="1"/>
+					<GradientStop Color="#FFC4C4C4" Offset="0.086"/>
+					<GradientStop Color="#FF414141" Offset="0.94"/>
+					<GradientStop Color="#00848484" Offset="0.5"/>
+				</LinearGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
+		<Label x:Name="Label1" Content="{Binding Text, ElementName=RtwLedButton1}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{Binding U_FontBrush, ElementName=RtwLedButton1}"/>
+        <Grid d:DesignHeight="20" d:DesignWidth="20" x:Name="Led" Visibility="{Binding U_LedVisibility,ElementName=RtwLedButton1}" Height="{Binding U_LedHeight, ElementName=RtwLedButton1}" Width="{Binding U_LedWidth, ElementName=RtwLedButton1}" HorizontalAlignment="Left" Margin="{Binding U_LedPosition, ElementName=RtwLedButton1}" VerticalAlignment="Top">
+            <Ellipse Stroke="{x:Null}"  Visibility="{Binding U_LedVisibility,ElementName=RtwLedButton1}">
+				<Ellipse.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="White" Offset="0"/>
+						<GradientStop Color="#FF606060" Offset="1"/>
+						<GradientStop Color="#FFCECECE" Offset="0.086"/>
+						<GradientStop Color="#FF6C6969" Offset="0.94"/>
+						<GradientStop Color="#FF848484" Offset="0.5"/>
+					</LinearGradientBrush>
+				</Ellipse.Fill>
+			</Ellipse>
+			<Ellipse x:Name="LedOff" Stroke="{x:Null}" Margin="3.095,3.537,3.095,2.653" Visibility="{Binding U_Off, ElementName=RtwLedButton1}">
+				<Ellipse.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="White" Offset="0"/>
+						<GradientStop Color="#FFAFAFAF" Offset="1"/>
+						<GradientStop Color="#FFC6C6C6" Offset="0.086"/>
+						<GradientStop Color="#FFB4B4B4" Offset="0.94"/>
+						<GradientStop Color="#FF646464" Offset="0.5"/>
+					</LinearGradientBrush>
+				</Ellipse.Fill>
+			</Ellipse>
+            <Ellipse x:Name="LedGreen" Stroke="{x:Null}" Margin="3.095,3.537,3.095,2.653" Visibility="{Binding U_GreenOn, ElementName=RtwLedButton1}">
+				<Ellipse.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="White" Offset="0"/>
+						<GradientStop Color="#FFCEEFC3" Offset="1"/>
+						<GradientStop Color="#FF77C874" Offset="0.086"/>
+						<GradientStop Color="#FF50FF13" Offset="0.94"/>
+						<GradientStop Color="#FF0DD207" Offset="0.5"/>
+					</LinearGradientBrush>
+				</Ellipse.Fill>
+			</Ellipse>
+            <Ellipse x:Name="LedRed" Stroke="{x:Null}" Margin="3.095,3.537,3.095,2.653" Visibility="{Binding U_RedOn, ElementName=RtwLedButton1}">
+				<Ellipse.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="White" Offset="0"/>
+						<GradientStop Color="#FFEFA8A1" Offset="1"/>
+						<GradientStop Color="#FFC87874" Offset="0.086"/>
+						<GradientStop Color="#FFFF5F13" Offset="0.94"/>
+						<GradientStop Color="#FFD20707" Offset="0.5"/>
+					</LinearGradientBrush>
+				</Ellipse.Fill>
+			</Ellipse>
+		</Grid>
+	</Grid>
+</UserControl>

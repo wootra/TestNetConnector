@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="XmlDesigner.IXmlComponentBase" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAACIAAAgAAQAABBCAAEAIgAAAEAIQQBAgAAAAAA=</HashCode>
+      <FileName>Components\Controls\IXmlComponetBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="XmlDesigner.XmlButton" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAACIAAAgAAQAABBCAAECIgAAAEAIQQBAgAAAAAA=</HashCode>
+      <FileName>Components\Controls\XmlButton.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="XmlDesigner.XmlImageButton" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAACICAAgAAQAABBCAAECIgAAAEAMQQBAgAAAAAA=</HashCode>
+      <FileName>Components\Controls\XmlImageButton.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="XmlDesigner.XmlImageLed" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAACIAAAgAAQAABBCAAEAIgAAAEAIQQBAgAAAAAA=</HashCode>
+      <FileName>Components\Controls\XmlImageLed.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="XmlDesigner.XmlTextArea" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAACIAAAgAAQAABBCAAEAIgAAAEAIQQBAgAAAAAA=</HashCode>
+      <FileName>Components\Controls\XmlTextArea.cs</FileName>
+      <NewMemberFileName>Components\Controls\XmlLabel.cs</NewMemberFileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="XmlDesigner.XmlLayout" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUAAAAAIAAAgIIAAAABCAAABIgAAAEAIAQBAiAAgCAA=</HashCode>
+      <FileName>Components\Controls\XmlLayout.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="XmlDesigner.XmlTab" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUBAAAAIAAAgIIAAAABCAAABIgAAAEAIAQBAiAAACAA=</HashCode>
+      <FileName>Components\Controls\XmlTab.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="XmlDesigner.XmlTabControl" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUAAAAAIAAAgAAAAAABCAAAAIgAAAEAIAQBAiAAACAA=</HashCode>
+      <FileName>Components\Controls\XmlTabControl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="XmlDesigner.XmlTextBox" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAACIAAAgAAQAABBCAAEAIgAAAEAMQQBAgAAAAAE=</HashCode>
+      <FileName>Components\Controls\XmlTextBox.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="XmlDesigner.XmlTreeView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAACIAAAgAAQAABBCAAEAIgAAAEAMQQBAgAAAAAE=</HashCode>
+      <FileName>Components\Controls\XmlTreeView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="XmlDesigner.XmlCheckImageList" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAIAAAgAAgAAABCAAEAIAAAAEAIAUBAAAACAAA=</HashCode>
+      <FileName>Components\DataStructures\XmlCheckImageList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="XmlDesigner.XmlComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAIAAAggAQAAABCAAEAIAAQAEAIQQBAiAAACAA=</HashCode>
+      <FileName>Components\DataStructures\XmlComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="XmlDesigner.XmlImageList" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUAAAAAIAAAgAAgAAABCAAEAIAAAAEAIAUBAAAACAAA=</HashCode>
+      <FileName>Components\DataStructures\XmlImageList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="XmlDesigner.XmlLayoutCollection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAIAAAgAAAAEABCAIAQMAQAAEAIAQBAAABACAA=</HashCode>
+      <FileName>Components\DataStructures\XmlLayoutCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="XmlDesigner.XmlAction" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAIAAAgAAAAAABCAAQAIAIAAEAIAQBAAAAEAAA=</HashCode>
+      <FileName>Components\ForEvent\ActionsAndEvents\XmlAction.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="XmlDesigner.XmlActionList" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAAAAAIAACgAAAAAABCAAEAIAIAAEAIAQBAAAACAAA=</HashCode>
+      <FileName>Components\ForEvent\ActionsAndEvents\XmlActions.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="XmlDesigner.EventController" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Components\ForEvent\Structs\EventController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XmlDesigner.TrueCondition" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAIAAIgAAAAAABCAAAAIAAAAAAIAQBAAAAAAAA=</HashCode>
+      <FileName>Components\ForEvent\XmlComponentConditions\TrueCondition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="XmlDesigner.XmlComConditions" Collapsed="true">
+    <Position X="16.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components\ForEvent\XmlComponentConditions\XmlComConditions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XmlDesigner.GlobalVars" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EgAAAAhAAAEAAIAAAIAAAAACAAAABEAAAAQAAAAAAAA=</HashCode>
+      <FileName>Components\Functions\GlobalVars.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XmlDesigner.ScenarioXmlParser" Collapsed="true">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAKQEAQAAQABAAAABABAAAAAAAAAABAAIAAA=</HashCode>
+      <FileName>Components\Functions\ScenarioXMLParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XmlDesigner.XmlControlHandler" Collapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUBAAAABAIAAAAAAAAAIAAAAIAAAAAAAkAFAAAAAAAA=</HashCode>
+      <FileName>Components\Functions\XmlControlHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XmlDesigner.XmlItemInterface" Collapsed="true">
+    <Position X="11.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAgBCAAEAABAAAAAAAAAAAgIgAAAACYAAAAAEAAgA=</HashCode>
+      <FileName>Components\Interfaces\XmlItemInterface.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XmlDesigner.IXmlItemBase" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAIAAAgAAAAAABCAAAAIAAAAAAIAQBAAAAAAAA=</HashCode>
+      <FileName>Components\IXmlItemBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="XmlDesigner.XmlLogTable" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAIRAAgAACAgJBCAEEAIgAARkAMAQBAgAAAAAE=</HashCode>
+      <FileName>Components\TableItems\XmlLogTable.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="XmlDesigner.XmlScenarioRow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAIAAAgAgAAgABCAEQAIAIAAEAIAQBAAAAAAAA=</HashCode>
+      <FileName>Components\TableItems\XmlScenarioRow.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="XmlDesigner.XmlScenarioRows" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQIAAAAIAACkAhAACABCBAABIAIAAEAIAQBgAIAQIAA=</HashCode>
+      <FileName>Components\TableItems\XmlScenarioRows.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="XmlDesigner.XmlScenarioTable" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BGFCAAIIBAAgAECAAJBDAAEAqgABQkAMARhAgIIEAAE=</HashCode>
+      <FileName>Components\TableItems\XmlScenarioTable.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="XmlDesigner.XmlTableCondition" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAIAAIgIoAAAABCAAAAMAAAAAAYAQBAAAAgAAA=</HashCode>
+      <FileName>Components\TableItems\XmlTableCondition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="XmlDesigner.ForEvents.XmlEvent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAIIIAgAAAAAABCAAAEIAIAAEAIAQBAAAAAAAA=</HashCode>
+      <FileName>Components\ForEvent\ActionsAndEvents\XmlEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="XmlDesigner.ForEvents.XmlEvents" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAIAAAgAAAAAABCAAEAIAIAAEAIAQBAAAAAAAA=</HashCode>
+      <FileName>Components\ForEvent\ActionsAndEvents\XmlEvents.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="XmlDesigner.ForEvents.Conditions.XmlAndOrCondition" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAIAAAAIAAIgAAAAAABAAAAAIAAAAQAIAAAAAABAAAA=</HashCode>
+      <FileName>Components\ForEvent\Conditions\XmlAndOrCondition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XmlDesigner.ForEvents.Conditions.XmlCompareCondition" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAIIAIgAAAAAABAAAAAoAAAAQAIAAAAAABAACA=</HashCode>
+      <FileName>Components\ForEvent\Conditions\XmlCompareCondition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XmlDesigner.ForEvents.Conditions.XmlCondition" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAIAAIgACAAAQBCAAAAKAIIAVAIAQBAAAAAAAA=</HashCode>
+      <FileName>Components\ForEvent\Conditions\XmlCondition.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="XmlDesigner.ForEvents.Conditions.XmlConditionValue" Collapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABBAAAAAAAAAAAQAAAAAAIAAAAIAABAAAAQgAAAAAAA=</HashCode>
+      <FileName>Components\ForEvent\Conditions\XmlConditionValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XmlDesigner.ForEvents.Conditions.XmlCondTrueFalse" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAIgAAAAAABAAAAAIAAAAQAIAAAAAAAAAAA=</HashCode>
+      <FileName>Components\ForEvent\Conditions\XmlTrueFalseCondition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XmlDesigner.Properties.Resources" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="XmlDesigner.IXmlComponent" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAEAAAQAAgAAAAAA=</HashCode>
+      <FileName>Components\Interfaces\IXmlComponent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="XmlDesigner.IXmlComponentCondition" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components\Interfaces\IXmlComponentCondition.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="XmlDesigner.IXmlItem">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAABAAAAAIAAAAAAIAABAAAAAAAA=</HashCode>
+      <FileName>Components\Interfaces\IXmlItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="XmlDesigner.IXmlLayout" Collapsed="true">
+    <Position X="7.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Components\Interfaces\IXmlLayout.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="XmlDesigner.XmlItemTypes" Collapsed="true">
+    <Position X="13" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAEAKgCIAAEAAIQQAAAgAACAgIAAAAAAMAAAY=</HashCode>
+      <FileName>Components\Functions\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="XmlDesigner.XmlConditionTypes" Collapsed="true">
+    <Position X="11.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAICAAAAAgAAAAAAAAIAAAAAgAAgAAAAAAAA=</HashCode>
+      <FileName>Components\Functions\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="XmlDesigner.EventTypes" Collapsed="true">
+    <Position X="7.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAQAAAAAACAAAAAAABAAAAAAEABAA=</HashCode>
+      <FileName>Components\Functions\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="XmlDesigner.PanelTypes" Collapsed="true">
+    <Position X="9.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Components\Functions\Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>

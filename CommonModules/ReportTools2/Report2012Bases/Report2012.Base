@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Width>[:TotalWidth:]cm</Width>
+  <Page>
+    <PageHeight>[:PageHeight:]cm</PageHeight>
+    <PageWidth>[:PageWidth:]cm</PageWidth>
+    <LeftMargin>[:Margin:]cm</LeftMargin>
+    <RightMargin>[:Margin:]cm</RightMargin>
+    <TopMargin>[:Margin:]cm</TopMargin>
+    <BottomMargin>[:Margin:]cm</BottomMargin>
+    <ColumnSpacing>0.1cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    [/DataSources/]
+  </DataSources>
+  <DataSets>
+    [/DataSets/]
+  </DataSets>
+  <Body>
+    <ReportItems>
+      [/TitleItems/]
+      
+      [/ReportItems/]
+    </ReportItems>
+    <Height>[:BodyHeight:]cm</Height>
+    <Style />
+  </Body>
+  
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>63c62b65-4e89-4479-92bb-9fd449777902</rd:ReportID>
+</Report>

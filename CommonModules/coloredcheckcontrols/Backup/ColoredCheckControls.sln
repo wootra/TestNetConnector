@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{550C4320-C1C4-4A93-9307-72B15187A2F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColoredCheckControls", "ColoredCheckControls\ColoredCheckControls.csproj", "{E34C8FC1-D549-427E-9F79-330ACCA95DB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E34C8FC1-D549-427E-9F79-330ACCA95DB0}.Debug.ActiveCfg = Debug|.NET
+		{E34C8FC1-D549-427E-9F79-330ACCA95DB0}.Debug.Build.0 = Debug|.NET
+		{E34C8FC1-D549-427E-9F79-330ACCA95DB0}.Release.ActiveCfg = Release|.NET
+		{E34C8FC1-D549-427E-9F79-330ACCA95DB0}.Release.Build.0 = Release|.NET
+		{550C4320-C1C4-4A93-9307-72B15187A2F0}.Debug.ActiveCfg = Debug|.NET
+		{550C4320-C1C4-4A93-9307-72B15187A2F0}.Debug.Build.0 = Debug|.NET
+		{550C4320-C1C4-4A93-9307-72B15187A2F0}.Release.ActiveCfg = Release|.NET
+		{550C4320-C1C4-4A93-9307-72B15187A2F0}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

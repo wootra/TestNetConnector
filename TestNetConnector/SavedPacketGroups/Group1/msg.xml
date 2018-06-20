@@ -1,0 +1,29 @@
+<Packet>
+  <Infos Comment="" LastModified="2012-07-25 오후 1:46:15">
+    <Info />
+    <Info />
+  </Infos>
+  <Items>
+    <Item Name="tag" Type="int" IsSwap="False" Size="1">
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="dataSize" Type="int" IsSwap="False" Size="1">
+      <InitValue>8</InitValue>
+    </Item>
+    <Item Name="id" Type="int" IsSwap="False" Size="1">
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="time" Type="int" IsSwap="False" Size="4">
+      <InitValue> 1</InitValue>
+      <InitValue>2</InitValue>
+      <InitValue>3</InitValue>
+      <InitValue>4</InitValue>
+    </Item>
+    <Item Name="status" Type="int" IsSwap="False" Size="1">
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="data" Type="int" IsSwap="False" Size="1">
+      <InitValue>4</InitValue>
+    </Item>
+  </Items>
+</Packet>

@@ -1,0 +1,179 @@
+﻿<UserControl x:Class="RtwWpfControls.RtwTree"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:lv="clr-namespace:RtwWpfControls"
+             mc:Ignorable="d" 
+             
+             d:DesignHeight="300" d:DesignWidth="300" x:Name="ListTree1" ContentTemplate="{DynamicResource dTemplate}">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/ListStyle.xaml"/>
+                <ResourceDictionary>
+                    
+                    <ControlTemplate x:Key="TreeCheckBox" TargetType="{x:Type CheckBox}">
+                        <CheckBox
+                            Height="20" 
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Left"
+                            Visibility="{Binding ElementName=ListTree1, Path=CheckBoxVisibility}"
+                            IsChecked="{TemplateBinding IsChecked}"
+                            Style="{StaticResource CheckBoxTemplate}"
+                            IsEnabled="{TemplateBinding IsEnabled}"
+                            />
+                    </ControlTemplate>
+                    <!--
+                    <Style x:Key="TreeTextBlock" TargetType="{x:Type TextBlock}">
+                        <Style.Setters>
+                            <Setter Property="Text" Value="{Binding ElementName=ListTree1, Path=CheckBoxVisibility}"/>
+                        </Style.Setters>
+                    </Style>
+                    -->
+                    <DataTemplate x:Key="dTemplate" DataType="{x:Type UserControl}">
+                        <DataTemplate.Resources>
+                            <Style TargetType="{x:Type Rectangle}" x:Key="SeperatorLine">
+                                <Setter Property="Margin" Value="3,3,3,3"/>
+                                <Setter Property="Fill">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FFCCCCCC" Offset="0"/>
+                                            <GradientStop Color="#FF787878" Offset="0.522"/>
+                                            <GradientStop Color="#FFE4E0E0" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                            
+                            <HierarchicalDataTemplate x:Key="modelTemplate" DataType="{x:Type lv:RtwTreeNode}" ItemsSource="{Binding Children}">
+                                <HierarchicalDataTemplate.Resources>
+                                    <Style x:Key="itemStyle" TargetType="{x:Type Grid}">
+                                        <Setter Property="ToolTip" Value="{Binding ToolTipText}"/>
+                                        <Setter Property="Focusable" Value="False"/>
+                                        <Setter Property="Tag" Value="{Binding Tag}"/>
+                                        <EventSetter Event="MouseUp" Handler="MouseUpPreview"/>
+                                        <!--<EventSetter Event="MouseEnter" Handler="MouseEnter"/>-->
+                                    </Style>
+                                </HierarchicalDataTemplate.Resources>
+                                <StackPanel x:Name="stackPanel" Orientation="Horizontal" VerticalAlignment="Center" Margin="0,5" Width="Auto">
+                                    <HeaderedContentControl>
+                                        <Grid Height="Auto" Width="Auto" Margin="0" Style="{DynamicResource itemStyle}">
+                                            <Rectangle Name="rectangle" Width="128" VerticalAlignment="Stretch" Margin="0,-5">
+                                                <Rectangle.Fill>
+                                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                        <GradientStop Color="#00FFDE00"/>
+                                                        <GradientStop Color="#00FFE95B" Offset="1"/>
+                                                        <GradientStop Color="#00FFE32C" Offset="0.543"/>
+                                                    </LinearGradientBrush>
+                                                </Rectangle.Fill>
+                                            </Rectangle>
+                                            <StackPanel Orientation="Horizontal" Visibility="Visible">
+                                                <CheckBox 
+                                                
+                                                    IsChecked="{Binding Checked}"  
+                                                    IsEnabled="{Binding Enabled}"
+                                                    Checked="CheckBoxClicked"
+                                                    Unchecked="CheckBoxClicked"
+                                                    Style="{StaticResource CheckBoxTemplate}"
+                                                    Visibility="{Binding ElementName=ListTree1, Path=CheckBoxVisibility}"
+                                                />
+                                                <!--Template="{StaticResource TreeCheckBox}"  -->
+                                                <TextBlock Text="{Binding Name}" VerticalAlignment="Center" Width="Auto" Margin="0,0,0,0"/>
+                                                <!--<TextBlock Style="{StaticResource TreeTextBlock}" VerticalAlignment="Center" Width="Auto" Margin="0,0,0,0"/>-->
+                                                <ContentControl Content="{Binding UserDesign}"/>
+                                            </StackPanel>
+                                            
+                                        </Grid>
+                                    </HeaderedContentControl>
+                                </StackPanel>
+                            	
+                            </HierarchicalDataTemplate>
+
+<!--
+                            <HierarchicalDataTemplate x:Key="variables" DataType="{x:Type lv:TreeNode}">
+                                <HierarchicalDataTemplate.ItemContainerStyle>
+                                    <Style TargetType="TreeViewItem">
+                                        <Setter Property="ToolTip" Value="{Binding ToolTipText}"/>
+                                        <Setter Property="Focusable" Value="False"/>
+                                    </Style>
+                                </HierarchicalDataTemplate.ItemContainerStyle>
+                                <CheckBox Height="20" Name="List_Check" Checked="List_Check_Checked" Unchecked="List_Check_UnChecked" IsChecked="{Binding Checked}" VerticalAlignment="Center" Style="{DynamicResource CheckBoxTemplate}" Content="{Binding Name}"/>
+                            </HierarchicalDataTemplate>
+-->
+                            <!--
+                            <DataTemplate x:Key="variableTemplate" DataType="{x:Type lv:TreeEnd}">
+                                <CheckBox Width="13" Checked="List_Check_Checked" Unchecked="List_Check_UnChecked" IsChecked="{Binding Checked}" VerticalAlignment="Center" Content="{Binding Name}" Style="{DynamicResource CheckBoxTemplate}" />
+                                <DataTemplate.Resources>
+                                    <Style TargetType="TreeViewItem">
+                                        <Setter Property="ToolTip" Value="{Binding ToolTipText}"/>
+                                        <Setter Property="Focusable" Value="False"/>
+                                    </Style>
+                                </DataTemplate.Resources>
+                               
+                            
+                            </DataTemplate>
+                            -->
+                        </DataTemplate.Resources>
+                        <Grid  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" d:DesignWidth="321" d:DesignHeight="308">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="25"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Rectangle Height="Auto" Grid.Row="0" Margin="0,0,0,-4" RadiusX="5" RadiusY="5">
+                                <Rectangle.Fill>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FF082758" Offset="0"/>
+                                        <GradientStop Color="#FF153D7E" Offset="0.884"/>
+                                        <GradientStop Color="#FF366BBE" Offset="0.052"/>
+                                        <GradientStop Color="#FF1B3F7A" Offset="0.103"/>
+                                        <GradientStop Color="#FF3363B2" Offset="0.716"/>
+                                    </LinearGradientBrush>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <Label Name="L_Title" Grid.Row="0" Content="{Binding}" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFE0E0E0"/>
+                            <Grid Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0">
+                                
+                                <Grid.Resources>
+                                    
+                                    
+                                </Grid.Resources>
+                                
+                            	<Rectangle Height="8" RadiusY="0" Grid.Row="0" RadiusX="0" VerticalAlignment="Top" Margin="0">
+                            		<Rectangle.Fill>
+                            			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            				<GradientStop Color="#FFB8B8B8" Offset="0"/>
+                            				<GradientStop Color="#FF999999" Offset="1"/>
+                            				<GradientStop Color="White" Offset="0.06"/>
+                            				<GradientStop Color="#FFEDEDED" Offset="0.94"/>
+                            				<GradientStop Color="#FFCCCCCC" Offset="0.116"/>
+                            			</LinearGradientBrush>
+                            		</Rectangle.Fill>
+                            	</Rectangle>
+
+
+                            	<TreeView x:Name="MyTreeView" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                            		ItemTemplate="{DynamicResource modelTemplate}" 
+                            		ItemsSource="{Binding Items, ElementName=ListTree1}" 
+                            		ItemContainerStyle="{DynamicResource TreeViewItemStyle}" 
+                            		d:LayoutOverrides="GridBox" Margin="0,8,0,0">
+                            		<TreeView.Background>
+                            			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            				<GradientStop Color="#2389D1FF" Offset="0"/>
+                            				<GradientStop Color="#36FFFFFF" Offset="1"/>
+                            			</LinearGradientBrush>
+                            		</TreeView.Background>
+                            	</TreeView>
+                            </Grid>
+
+
+                        </Grid>
+                    </DataTemplate>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        	
+  
+        </ResourceDictionary>
+        
+    </UserControl.Resources>
+</UserControl>

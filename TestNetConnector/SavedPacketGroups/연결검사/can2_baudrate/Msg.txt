@@ -1,0 +1,5 @@
+short in_command=0x0502;
+byte ifcc1=0;
+byte ifcc2=0;
+int timeTag[4]={0,0,0,0};
+int size=0;

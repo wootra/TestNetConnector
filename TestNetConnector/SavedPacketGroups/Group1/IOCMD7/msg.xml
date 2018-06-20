@@ -1,0 +1,26 @@
+<Packet>
+  <Infos Comment="" LastModified="2012-09-19 오후 6:13:32">
+    <Info />
+    <Info />
+  </Infos>
+  <Items>
+    <Item Name="tag" Type="uint" IsSwap="False" Size="1">
+      <InitValue>0xbead</InitValue>
+    </Item>
+    <Item Name="dataSize" Type="int" IsSwap="False" Size="1">
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="id" Type="int" IsSwap="False" Size="1">
+      <InitValue>5</InitValue>
+    </Item>
+    <Item Name="time" Type="int" IsSwap="False" Size="4">
+      <InitValue> 1</InitValue>
+      <InitValue>2</InitValue>
+      <InitValue>3</InitValue>
+      <InitValue>4</InitValue>
+    </Item>
+    <Item Name="status" Type="int" IsSwap="False" Size="1">
+      <InitValue>1</InitValue>
+    </Item>
+  </Items>
+</Packet>

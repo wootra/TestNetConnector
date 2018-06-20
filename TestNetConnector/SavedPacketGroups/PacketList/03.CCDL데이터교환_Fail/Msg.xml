@@ -1,0 +1,35 @@
+<Packet>
+  <Infos Comment="" LastModified="0001-01-01 오전 12:00:00">
+    <Info />
+    <Info />
+  </Infos>
+  <Items>
+    <Item Name="in_command" Type="ushort" IsSwap="False" Size="1">
+      <InitValue>0x0001</InitValue>
+    </Item>
+    <Item Name="in_tag" Type="short" IsSwap="False" Size="1">
+      <InitValue>3</InitValue>
+    </Item>
+    <Item Name="timeTag" Type="int" IsSwap="False" Size="4">
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+    </Item>
+    <Item Name="size" Type="int" IsSwap="False" Size="1">
+      <InitValue>10</InitValue>
+    </Item>
+    <Item Name="data" Type="byte" IsSwap="False" Size="10">
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+      <InitValue>0</InitValue>
+    </Item>
+  </Items>
+</Packet>

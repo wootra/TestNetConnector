@@ -1,0 +1,10 @@
+<Packet>
+  <Items>
+    <Item Name="a" Type="short" IsSwap="False" Size="1">
+      <InitValue>3</InitValue>
+    </Item>
+    <Item Name="b" Type="short" IsSwap="False" Size="1">
+      <InitValue>1</InitValue>
+    </Item>
+  </Items>
+</Packet>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<?xml-model href="../ComponentSchemas/LabelSchema.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Label xmlns="http://s2gg.org/schemas/RuleSchemas"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://s2gg.org/schemas/RuleSchemas ../ComponentSchemas/LabelSchema.xsd"
+ 
+ Enabled="true"
+ TextAlign="MiddleCenter"
+ TextColor="Black"
+ BackColor="#FF0000"
+ Text="Test"/>
+

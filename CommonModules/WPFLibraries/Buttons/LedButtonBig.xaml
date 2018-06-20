@@ -1,0 +1,420 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="Buttons.LedButtonBig"
+	x:Name="Btn1"
+	d:DesignWidth="293" d:DesignHeight="75" ContentTemplate="{DynamicResource LabelInBtn}">
+	<UserControl.Resources>
+        
+        <DataTemplate x:Key="LabelInBtn">
+            <DataTemplate.Resources>
+                <Storyboard x:Key="MouseOver">
+                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+                    	<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0.862" KeySpline="0,0,0.83,0.18"/>
+                    </DoubleAnimationUsingKeyFrames>
+                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="label">
+                    	<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="-2"/>
+                    </DoubleAnimationUsingKeyFrames>
+                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Led">
+                    	<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="-2"/>
+                    </DoubleAnimationUsingKeyFrames>
+                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Led_Copy">
+                    	<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="-2"/>
+                    </DoubleAnimationUsingKeyFrames>
+                </Storyboard>
+                <Storyboard x:Key="MouseOut">
+                	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="label">
+                		<SplineDoubleKeyFrame KeyTime="0" Value="-2"/>
+                		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                	</DoubleAnimationUsingKeyFrames>
+                	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+                		<SplineDoubleKeyFrame KeyTime="0" Value="0.871"/>
+                		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0.918"/>
+                	</DoubleAnimationUsingKeyFrames>
+                	<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="label">
+                		<SplineThicknessKeyFrame KeyTime="0" Value="0"/>
+                		<SplineThicknessKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                	</ThicknessAnimationUsingKeyFrames>
+                	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Led">
+                		<SplineDoubleKeyFrame KeyTime="0" Value="-2"/>
+                		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                	</DoubleAnimationUsingKeyFrames>
+                	<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Led_Copy">
+                		<SplineDoubleKeyFrame KeyTime="0" Value="-2"/>
+                		<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                	</DoubleAnimationUsingKeyFrames>
+                </Storyboard>
+            </DataTemplate.Resources>
+			<Grid Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" d:DesignWidth="266.833" d:DesignHeight="114.167">
+				<Label Name="label" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Panel.ZIndex="1" Content="{Binding}" RenderTransformOrigin="0.5,0.5">
+					<Label.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform/>
+							<SkewTransform/>
+							<RotateTransform/>
+							<TranslateTransform/>
+						</TransformGroup>
+					</Label.RenderTransform>
+				</Label>
+				<Rectangle Name="rectangle" RadiusY="5" RadiusX="5" StrokeThickness="3" Margin="0" RenderTransformOrigin="-4,0" Height="Auto" Width="Auto">
+					<Rectangle.Stroke>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Color="#8B000000" Offset="0"/>
+							<GradientStop Offset="0.685"/>
+							<GradientStop Color="#54636363" Offset="0.129"/>
+						</LinearGradientBrush>
+					</Rectangle.Stroke>
+					<Rectangle.Effect>
+						<DropShadowEffect/>
+					</Rectangle.Effect>
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Offset="0"/>
+							<GradientStop Color="#C6FFFFFF" Offset="0.918"/>
+							<GradientStop Color="#62000000" Offset="1"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+				<Rectangle x:Name="Led" HorizontalAlignment="Left" Margin="9,8,0,0" RadiusY="5" RadiusX="5" StrokeThickness="3" Width="15" RenderTransformOrigin="0.5,0.444" Height="16" VerticalAlignment="Top">
+					<Rectangle.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform/>
+							<SkewTransform/>
+							<RotateTransform/>
+							<TranslateTransform/>
+						</TransformGroup>
+					</Rectangle.RenderTransform>
+					<Rectangle.Effect>
+						<BlurEffect/>
+					</Rectangle.Effect>
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Offset="0" Color="#C80069BA"/>
+							<GradientStop Color="#CC9BACB8" Offset="0.914"/>
+							<GradientStop Color="#C7043358" Offset="1"/>
+							<GradientStop Color="#C8FFFFFF" Offset="0.06"/>
+							<GradientStop Color="#865AB0F3" Offset="0.168"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+					<Rectangle.Stroke>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Color="#8B000000" Offset="0"/>
+							<GradientStop Offset="0.685"/>
+							<GradientStop Color="#54636363" Offset="0.129"/>
+						</LinearGradientBrush>
+					</Rectangle.Stroke>
+				</Rectangle>
+				<Rectangle x:Name="Led_Copy" HorizontalAlignment="Left" Margin="9,8,0,0" RadiusY="5" RadiusX="5" StrokeThickness="3" Width="15" RenderTransformOrigin="0.5,0.444" Height="16" VerticalAlignment="Top">
+					<Rectangle.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform/>
+							<SkewTransform/>
+							<RotateTransform/>
+							<TranslateTransform/>
+						</TransformGroup>
+					</Rectangle.RenderTransform>
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Offset="0" Color="#E00069BA"/>
+							<GradientStop Color="#F00E4E29" Offset="0.922"/>
+							<GradientStop Color="#EA043358" Offset="1"/>
+							<GradientStop Color="#F386A7C0" Offset="0.06"/>
+							<GradientStop Color="#F7648D2C" Offset="0.168"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+					<Rectangle.Stroke>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Color="#8B000000" Offset="0"/>
+							<GradientStop Offset="0.685"/>
+							<GradientStop Color="#54636363" Offset="0.129"/>
+						</LinearGradientBrush>
+					</Rectangle.Stroke>
+				</Rectangle>
+			</Grid>
+			<DataTemplate.Triggers>
+				<Trigger Property="AllowDrop" Value="True">
+					<Setter
+				Property="FontWeight" TargetName="label" Value="Bold"/>
+					<Setter Property="Stroke" TargetName="rectangle">
+						<Setter.Value>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="#AE250909" Offset="0"/>
+								<GradientStop Color="#00BA8019" Offset="0.685"/>
+								<GradientStop Color="#D234E01C" Offset="0.129"/>
+							</LinearGradientBrush>
+						</Setter.Value>
+					</Setter>
+					<Setter Property="Width" TargetName="Led" Value="19"/>
+					<Setter Property="Height" TargetName="Led" Value="20.266"/>
+					<Setter Property="Margin" TargetName="Led" Value="7,6.106,0,0"/>
+					<Setter Property="Fill" TargetName="Led">
+						<Setter.Value>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="#C81FBA00" Offset="0"/>
+								<GradientStop Color="#CC45CA20" Offset="0.914"/>
+								<GradientStop Color="#C76FF34C" Offset="1"/>
+								<GradientStop Color="#C8FFFFFF" Offset="0.06"/>
+								<GradientStop Color="#8697FF20" Offset="0.168"/>
+							</LinearGradientBrush>
+						</Setter.Value>
+					</Setter>
+					<Setter Property="Fill" TargetName="Led_Copy">
+						<Setter.Value>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="#E01FBA00" Offset="0"/>
+								<GradientStop Color="#F007DC00" Offset="0.922"/>
+								<GradientStop Color="#EA20D207" Offset="1"/>
+								<GradientStop Color="#F386C092" Offset="0.06"/>
+								<GradientStop Color="#F79FFD1E" Offset="0.168"/>
+							</LinearGradientBrush>
+						</Setter.Value>
+					</Setter>
+					
+				</Trigger>
+				<Trigger Property="IsMouseOver" Value="True">
+					<Trigger.ExitActions>
+						<BeginStoryboard x:Name="MouseOut_BeginStoryboard4" Storyboard="{StaticResource MouseOut}"/>
+					</Trigger.ExitActions>
+					<Trigger.EnterActions>
+						<BeginStoryboard Storyboard="{StaticResource MouseOver}"/>
+					</Trigger.EnterActions>
+				</Trigger>
+				<EventTrigger RoutedEvent="Mouse.MouseEnter">
+					<BeginStoryboard x:Name="MouseOver_BeginStoryboard" Storyboard="{StaticResource MouseOver}"/>
+				</EventTrigger>
+				<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown">
+					<BeginStoryboard x:Name="MouseOut_BeginStoryboard" Storyboard="{StaticResource MouseOut}"/>
+				</EventTrigger>
+				<EventTrigger RoutedEvent="UIElement.MouseLeftButtonUp">
+					<BeginStoryboard x:Name="MouseOut_BeginStoryboard1" Storyboard="{StaticResource MouseOver}"/>
+				</EventTrigger>
+				<EventTrigger RoutedEvent="Mouse.MouseLeave">
+					<BeginStoryboard x:Name="MouseOut_BeginStoryboard2" Storyboard="{StaticResource MouseOut}"/>
+				</EventTrigger>
+			</DataTemplate.Triggers>
+		</DataTemplate>
+        <DataTemplate x:Key="SkyBlue">
+        	<DataTemplate.Resources>
+        		<Storyboard x:Key="MouseOver">
+        			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+        				<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0.823" KeySpline="0,0,0.83,0.18"/>
+        			</DoubleAnimationUsingKeyFrames>
+        			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="label">
+        				<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="-2"/>
+        			</DoubleAnimationUsingKeyFrames>
+        			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+        				<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0.043"/>
+        			</DoubleAnimationUsingKeyFrames>
+        			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[4].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+        				<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0.125"/>
+        			</DoubleAnimationUsingKeyFrames>
+        			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+        				<SplineColorKeyFrame KeyTime="0:0:0.2" Value="#C89FD5FF"/>
+        			</ColorAnimationUsingKeyFrames>
+        			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Led">
+        				<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="-2"/>
+        			</DoubleAnimationUsingKeyFrames>
+        			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Led_Copy">
+        				<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="-2"/>
+        			</DoubleAnimationUsingKeyFrames>
+        		</Storyboard>
+        		<Storyboard x:Key="MouseOut">
+        			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="label">
+        				<SplineDoubleKeyFrame KeyTime="0" Value="-2"/>
+        				<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+        			</DoubleAnimationUsingKeyFrames>
+        			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+        				<SplineDoubleKeyFrame KeyTime="0" Value="0.802"/>
+        				<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0.918"/>
+        			</DoubleAnimationUsingKeyFrames>
+        			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="label">
+        				<SplineThicknessKeyFrame KeyTime="0" Value="0"/>
+        				<SplineThicknessKeyFrame KeyTime="0:0:0.2" Value="0"/>
+        			</ThicknessAnimationUsingKeyFrames>
+        			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[4].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+        				<SplineDoubleKeyFrame KeyTime="0" Value="0.095"/>
+        				<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0.168"/>
+        			</DoubleAnimationUsingKeyFrames>
+        			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+        				<SplineDoubleKeyFrame KeyTime="0" Value="0.043"/>
+        				<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0.06"/>
+        			</DoubleAnimationUsingKeyFrames>
+        			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+        				<SplineColorKeyFrame KeyTime="0" Value="#C89ECDF1"/>
+        				<SplineColorKeyFrame KeyTime="0:0:0.2" Value="#C8FFFFFF"/>
+        			</ColorAnimationUsingKeyFrames>
+        			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+        				<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+        				<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+        			</DoubleAnimationUsingKeyFrames>
+        			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Led">
+        				<SplineDoubleKeyFrame KeyTime="0" Value="-2"/>
+        				<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+        			</DoubleAnimationUsingKeyFrames>
+        			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Led_Copy">
+        				<SplineDoubleKeyFrame KeyTime="0" Value="-2"/>
+        				<SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+        			</DoubleAnimationUsingKeyFrames>
+        		</Storyboard>
+        	</DataTemplate.Resources>
+        	<Grid Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" d:DesignWidth="266.833" d:DesignHeight="114.167">
+        		<Label x:Name="label" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Panel.ZIndex="1" Content="{Binding}" RenderTransformOrigin="0.5,0.5">
+        			<Label.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Label.RenderTransform>
+        		</Label>
+        		<Rectangle x:Name="rectangle" RadiusY="5" RadiusX="5" StrokeThickness="3" Margin="0" RenderTransformOrigin="-4,0" Height="Auto" Width="Auto">
+        			<Rectangle.Stroke>
+        				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        					<GradientStop Color="#8B000000" Offset="0"/>
+        					<GradientStop Offset="0.685"/>
+        					<GradientStop Color="#54636363" Offset="0.129"/>
+        				</LinearGradientBrush>
+        			</Rectangle.Stroke>
+        			<Rectangle.Effect>
+        				<DropShadowEffect/>
+        			</Rectangle.Effect>
+        			<Rectangle.Fill>
+        				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        					<GradientStop Offset="0" Color="#C80069BA"/>
+        					<GradientStop Color="#CC9BACB8" Offset="0.914"/>
+        					<GradientStop Color="#C7043358" Offset="1"/>
+        					<GradientStop Color="#C8FFFFFF" Offset="0.06"/>
+        					<GradientStop Color="#865AB0F3" Offset="0.168"/>
+        				</LinearGradientBrush>
+        			</Rectangle.Fill>
+        		</Rectangle>
+        		<Rectangle x:Name="Led" HorizontalAlignment="Left" Margin="9,8,0,0" RadiusY="5" RadiusX="5" StrokeThickness="3" Width="15" RenderTransformOrigin="0.5,0.444" Height="16" VerticalAlignment="Top" Visibility="{Binding Tag,ElementName=Btn1}">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
+        			<Rectangle.Effect>
+        				<BlurEffect/>
+        			</Rectangle.Effect>
+        			<Rectangle.Fill>
+        				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        					<GradientStop Offset="0" Color="#C80069BA"/>
+        					<GradientStop Color="#CC9BACB8" Offset="0.914"/>
+        					<GradientStop Color="#C7043358" Offset="1"/>
+        					<GradientStop Color="#C8FFFFFF" Offset="0.06"/>
+        					<GradientStop Color="#865AB0F3" Offset="0.168"/>
+        				</LinearGradientBrush>
+        			</Rectangle.Fill>
+        			<Rectangle.Stroke>
+        				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        					<GradientStop Color="#8B000000" Offset="0"/>
+        					<GradientStop Offset="0.685"/>
+        					<GradientStop Color="#54636363" Offset="0.129"/>
+        				</LinearGradientBrush>
+        			</Rectangle.Stroke>
+        		</Rectangle>
+                <Rectangle x:Name="Led_Copy" HorizontalAlignment="Left" Margin="9,8,0,0" RadiusY="5" RadiusX="5" StrokeThickness="3" Width="15" RenderTransformOrigin="0.5,0.444" Height="16" VerticalAlignment="Top" d:CopyToken="be46ebe0-286f-48ec-9c91-508a077f0b0f"  Visibility="{Binding Tag,ElementName=Btn1}">
+        			<Rectangle.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Rectangle.RenderTransform>
+        			<Rectangle.Fill>
+        				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        					<GradientStop Offset="0" Color="#E00069BA"/>
+        					<GradientStop Color="#F00E4E29" Offset="0.922"/>
+        					<GradientStop Color="#EA043358" Offset="1"/>
+        					<GradientStop Color="#F386A7C0" Offset="0.06"/>
+        					<GradientStop Color="#F7648D2C" Offset="0.168"/>
+        				</LinearGradientBrush>
+        			</Rectangle.Fill>
+        			<Rectangle.Stroke>
+        				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        					<GradientStop Color="#8B000000" Offset="0"/>
+        					<GradientStop Offset="0.685"/>
+        					<GradientStop Color="#54636363" Offset="0.129"/>
+        				</LinearGradientBrush>
+        			</Rectangle.Stroke>
+        		</Rectangle>
+        	</Grid>
+        	<DataTemplate.Triggers>
+        		<Trigger Property="AllowDrop" Value="True">
+        			<Setter Property="Stroke" TargetName="rectangle">
+        				<Setter.Value>
+        					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        						<GradientStop Color="#AE250909" Offset="0"/>
+        						<GradientStop Color="#00BA8019" Offset="0.685"/>
+        						<GradientStop Color="#D2E01C1C" Offset="0.129"/>
+        					</LinearGradientBrush>
+        				</Setter.Value>
+        			</Setter>
+        			<Setter Property="Fill" TargetName="Led">
+        				<Setter.Value>
+        					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        						<GradientStop Color="#C80069BA" Offset="0"/>
+        						<GradientStop Color="#CC5DE222" Offset="0.914"/>
+        						<GradientStop Color="#C7043358" Offset="1"/>
+        						<GradientStop Color="#C8FFFFFF" Offset="0.06"/>
+        						<GradientStop Color="#EA34FF18" Offset="0.172"/>
+        					</LinearGradientBrush>
+        				</Setter.Value>
+        			</Setter>
+        			<Setter Property="Effect" TargetName="Led">
+        				<Setter.Value>
+        					<BlurEffect Radius="12"/>
+        				</Setter.Value>
+        			</Setter>
+        			<Setter Property="Stroke" TargetName="Led_Copy" Value="{x:Null}"/>
+        			<Setter Property="Fill" TargetName="Led_Copy">
+        				<Setter.Value>
+        					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        						<GradientStop Color="#C80069BA" Offset="0"/>
+        						<GradientStop Color="#CC0CCC32" Offset="0.914"/>
+        						<GradientStop Color="#C7043358" Offset="1"/>
+        						<GradientStop Color="#C8FFFFFF" Offset="0.06"/>
+        						<GradientStop Color="#C497F35A" Offset="0.164"/>
+        					</LinearGradientBrush>
+        				</Setter.Value>
+        			</Setter>
+        			<Setter Property="VerticalAlignment" TargetName="Led" Value="Top"/>
+        			<Setter Property="Margin" TargetName="Led" Value="5,4.004,0,0"/>
+        			<Setter Property="Width" TargetName="Led" Value="21"/>
+        			<Setter Property="Height" TargetName="Led" Value="23.625"/>
+					
+        		</Trigger>
+        		<Trigger Property="IsMouseOver" Value="True">
+        			<Trigger.ExitActions>
+        				<BeginStoryboard x:Name="MouseOut_BeginStoryboard4" Storyboard="{StaticResource MouseOut}"/>
+        			</Trigger.ExitActions>
+        			<Trigger.EnterActions>
+        				<BeginStoryboard Storyboard="{StaticResource MouseOver}"/>
+        			</Trigger.EnterActions>
+        		</Trigger>
+        		<EventTrigger RoutedEvent="Mouse.MouseEnter">
+        			<BeginStoryboard x:Name="MouseOver_BeginStoryboard" Storyboard="{StaticResource MouseOver}"/>
+        		</EventTrigger>
+        		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown">
+        			<BeginStoryboard x:Name="MouseOut_BeginStoryboard" Storyboard="{StaticResource MouseOut}"/>
+        		</EventTrigger>
+        		<EventTrigger RoutedEvent="UIElement.MouseLeftButtonUp">
+        			<BeginStoryboard x:Name="MouseOut_BeginStoryboard1" Storyboard="{StaticResource MouseOver}"/>
+        		</EventTrigger>
+        		<EventTrigger RoutedEvent="Mouse.MouseLeave">
+        			<BeginStoryboard x:Name="MouseOut_BeginStoryboard2" Storyboard="{StaticResource MouseOut}"/>
+        		</EventTrigger>
+        	</DataTemplate.Triggers>
+        </DataTemplate>
+
+	</UserControl.Resources>
+</UserControl>
